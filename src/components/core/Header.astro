@@ -29,15 +29,17 @@ const { class: className } = Astro.props;
           className="flex gap-2 hover:no-underline text-2xl"
           variant="link"
         >
-          <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
+          <!-- <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" /> -->
           {SITE.title}
         </Button>
       </a>
+
       <a href="/" class="px-4 flex md:hidden">
         <Button client:load className="" variant="ghost" size="icon">
           <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
         </Button>
       </a>
+
       <div class="hidden md:block">
         <NavMenu />
       </div>
@@ -54,6 +56,7 @@ const { class: className } = Astro.props;
           </a>
         )
       }
+
       <div class="md:hidden flex flex-row-reverse gap-4">
         <HamNavMenu />
         <ModeToggle client:load transition:persist />
