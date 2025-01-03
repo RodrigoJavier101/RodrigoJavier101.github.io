@@ -1,4 +1,6 @@
-<h1 align="center">CelestialDocs</h1>
+<h1 align="center">CelestialDocs / Code Chunks</h1>
+
+<p>I have to thank the creator of this template, so I keep the refereces to the main repo.</p>
 
 <p align="center">
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/HYP3R00T/CelestialDocs/deploy.yml?style=for-the-badge&labelColor=363a4f&color=8aadf4">
