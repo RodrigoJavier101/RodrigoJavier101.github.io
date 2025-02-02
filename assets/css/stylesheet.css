@@ -37,6 +37,7 @@
 /* =================================== */
 body, html {
   height: 100%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 body {
