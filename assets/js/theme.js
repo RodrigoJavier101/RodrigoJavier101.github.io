@@ -110,7 +110,8 @@
         {
           scrollTop: $(sectionTo).offset().top - 120,
         },
-        1000,
+        // 1000,
+        500,
         "easeInOutExpo"
       );
   });
