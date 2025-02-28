@@ -28,309 +28,191 @@
       </div>
     </div>
 
-    <div id="main-wrapper" class="bg-light-4">
-      <!-- NAVBAR MENU -->
-      <header id="header" class="sticky-top">
-        <nav
-          class="primary-menu navbar navbar-expand-lg bg-dark navbar-text-light navbar-dropdown-dark border-0"
-        >
-          <div class="container-fluid">
-            <button
-              id="sidebarCollapse"
-              class="navbar-toggler d-block d-md-none"
-              type="button"
-            >
-              <span></span><span class="w-75"></span><span class="w-50"></span>
-            </button>
+   
+      <div id="main-wrapper" class="bg-light-4">
+        <!-- NAVBAR MENU -->
+        <header id="header" class="sticky-top">
+          <nav
+            class="primary-menu navbar navbar-expand-lg bg-dark navbar-text-light navbar-dropdown-dark border-0"
+          >
+            <div class="container-fluid">
+              <button
+                id="sidebarCollapse"
+                class="navbar-toggler d-block d-md-none"
+                type="button"
+              >
+                <span></span><span class="w-75"></span
+                ><span class="w-50"></span>
+              </button>
 
-            <a class="logo ml-md-3" title="iDocs Template">
-              <img
-                style="width: 70px; height: 70px; border-radius: 55%"
-                src="assets/images/calvin.png"
-                alt="iDocs Template"
-              />
-            </a>
-            <button
-              class="navbar-toggler ml-auto"
-              type="button"
-              data-toggle="collapse"
-              data-target="#header-nav"
-            >
-              <span></span><span></span><span></span>
-            </button>
+              <a
+                href="/home-content"
+                class="logo ml-md-3"
+                title="iDocs Template"
+                onclick="route()"
+              >
+                <img
+                  style="width: 70px; height: 70px; border-radius: 55%"
+                  src="assets/images/calvin.png"
+                  alt="iDocs Template"
+                />
+              </a>
+              <button
+                class="navbar-toggler ml-auto"
+                type="button"
+                data-toggle="collapse"
+                data-target="#header-nav"
+              >
+                <span></span><span></span><span></span>
+              </button>
 
-            <div
-              id="header-nav"
-              class="collapse navbar-collapse justify-content-end"
-            >
-              <ul class="navbar-nav text-1">
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#">* MATHS *</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item text-0" href="#"
-                        >Working on this section</a
-                      >
-                    </li>
-                  </ul>
+              <div
+                id="header-nav"
+                class="collapse navbar-collapse justify-content-end"
+              >
+                <ul class="navbar-nav text-1">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">* MATHS *</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item text-0" href="#"
+                          >Working on this section</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">* SCIENCE *</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item text-0" href="#"
+                          >Working on this section</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">* COMPUTER SCIENCE *</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item text-0" href="#"
+                          >Working on this section</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">| ABOUT ME |</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="text-0" href="./">|01 : Init</a>
+                      </li>
+                      <li>
+                        <a class="text-0" href="./about.html"
+                          >|02 : Me and my CV</a
+                        >
+                      </li>
+                      <li>
+                        <a class="text-0" href="./contact.html"
+                          >|03 : Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+                <li class="social-icons-twitter">
+                  <a
+                    data-toggle="tooltip"
+                    href="https://www.linkedin.com/in/rodrigo-javier-gd/"
+                    target="_blank"
+                    title=""
+                    data-original-title="Dev Profile"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
                 </li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#">* SCIENCE *</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item text-0" href="#"
-                        >Working on this section</a
-                      >
-                    </li>
-                  </ul>
+                <li class="social-icons-facebook">
+                  <a
+                    data-toggle="tooltip"
+                    href="https://www.github.com/RodrigoJavier101/"
+                    target="_blank"
+                    title=""
+                    data-original-title="My repo"
+                    ><i class="fab fa-github"></i
+                  ></a>
                 </li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#">* COMPUTER SCIENCE *</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item text-0" href="#"
-                        >Working on this section</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a class="dropdown-toggle" href="#">| ABOUT ME |</a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="text-0" href="./">|01 : Init</a>
-                    </li>
-                    <li>
-                      <a class="text-0" href="./about.html"
-                        >|02 : Me and my CV</a
-                      >
-                    </li>
-                    <li>
-                      <a class="text-0" href="./contact.html">|03 : Contact</a>
-                    </li>
-                  </ul>
+                <li class="social-icons-dribbble">
+                  <a
+                    data-toggle="tooltip"
+                    href="https://rodrigojavier101.github.io/youtube-channel/"
+                    target="_blank"
+                    title=""
+                    data-original-title="YT Channel"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
                 </li>
               </ul>
             </div>
-            <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
-              <li class="social-icons-twitter">
+          </nav>
+        </header>
+        <!-- NAVBAR MENU -->
+
+        <div id="root">
+          <div id="main-page"></div>
+        </div>
+
+        <footer id="footer" class="section bg-dark footer-text-light">
+          <div class="container">
+            <ul
+              class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3"
+            >
+              <li>
                 <a
                   data-toggle="tooltip"
                   href="https://www.linkedin.com/in/rodrigo-javier-gd/"
                   target="_blank"
                   title=""
-                  data-original-title="Dev Profile"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
+                  data-original-title="Professional Profile"
+                  ><i class="fab fa-linkedin-in"></i>
+                </a>
               </li>
-              <li class="social-icons-facebook">
+
+              <li>
                 <a
                   data-toggle="tooltip"
                   href="https://www.github.com/RodrigoJavier101/"
                   target="_blank"
                   title=""
-                  data-original-title="My repo"
+                  data-original-title="My main repository"
                   ><i class="fab fa-github"></i
                 ></a>
               </li>
-              <li class="social-icons-dribbble">
+              <li>
                 <a
                   data-toggle="tooltip"
                   href="https://rodrigojavier101.github.io/youtube-channel/"
                   target="_blank"
                   title=""
-                  data-original-title="YT Channel"
+                  data-original-title="YT channel"
                   ><i class="fab fa-youtube"></i
                 ></a>
               </li>
             </ul>
+            <p class="text-center">Rodrigo Javier &trade; 2025</p>
+            <p class="text-2 text-center mb-0">
+              With the help of
+              <a
+                class="btn-link"
+                target="_blank"
+                href="http://www.harnishdesign.net/"
+                >HarnishDesign</a
+              >.
+            </p>
           </div>
-        </nav>
-      </header>
-      <!-- NAVBAR MENU -->
-
-      <div id="content" role="main">
-        <!-- SIDE BAR MENU -->
-        <div class="idocs-navigation bg-dark docs-navigation-dark">
-          <ul class="nav flex-column text-1">
-            <li class="nav-item">
-              <a class="nav-link active text-0" href="#idocs_start"
-                >Content introduction</a
-              >
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link text-0" href="#idocs_installation"
-                    >About the topics
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active text-0" href="#trees">Trees</a>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link text-0" href="#maths">Mathematics </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-0" href="#science">Science </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-0" href="#computer-science"
-                    >Computer Science
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- SIDE BAR MENU -->
-
-        <!-- CONTENT -->
-        <div class="idocs-content">
-          <div class="container">
-            <!-- INTRODUCTION -->
-            <section id="idocs_start">
-              <p>Starting... "better doing it than stay waiting"</p>
-              <h1>Content Introduction</h1>
-              <p class="lead">
-                I have always wanted and pursued the desire to communicate
-                information related to technology and this is one of the steps
-                to make it a reality.
-              </p>
-              <p class="lead">
-                The main target of each section is to try to put the topic being
-                discussed into the best perspective in order to understand it.
-              </p>
-              <p class="lead">And, of course, hoping you enjoy.</p>
-            </section>
-
-            <hr class="divider" />
-
-            <section id="idocs_installation">
-              <h2>About the topics</h2>
-              <p class="lead">
-                The main topics will be mathematics and science as separated
-                sections. And of course, computer science as a main topic.
-              </p>
-            </section>
-
-            <hr />
-
-            <!-- TREES -->
-            <section id="trees">
-              <h1>Content Trees</h1>
-            </section>
-
-            <section id="maths">
-              <h2>Mathematics</h2>
-              <p class="lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita tenetur sequi voluptatum voluptatem mollitia, quo iste
-                dignissimos exercitationem nostrum deserunt maiores atque nam
-                excepturi nobis fugit debitis ullam aliquid magnam dolorem,
-                provident omnis impedit, doloremque placeat. Necessitatibus rem
-                tenetur consequatur veritatis iste inventore, qui ex quaerat, a
-                asperiores, quia corrupti. Nobis assumenda recusandae ducimus
-                labore quia ratione cum vitae rem iure ex voluptas repellat
-                atque ullam earum blanditiis deleniti illo ut fuga, odio enim ad
-                voluptates commodi quibusdam. Suscipit incidunt sunt quasi
-                consectetur, eius velit doloremque eligendi aliquid labore
-                laboriosam debitis. Ea officiis ipsum nostrum dignissimos minima
-                quidem voluptates adipisci!
-              </p>
-            </section>
-            <section id="science">
-              <h2>Science</h2>
-              <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
-                sit totam aperiam. Ducimus repellendus soluta porro, voluptas
-                voluptates nemo inventore quod molestiae libero aperiam at!
-                Omnis obcaecati quaerat molestias explicabo consequuntur laborum
-                aspernatur voluptatum magni nostrum, doloribus ab rerum
-                laboriosam ea aliquam ratione vero accusantium, eius sit porro
-                doloremque deserunt. Sequi dolorum harum quaerat, impedit
-                inventore at architecto eaque quam incidunt minima deserunt,
-                consequuntur perferendis! Facilis vitae nostrum dolores totam
-                cum provident obcaecati rerum, unde numquam quas repellendus
-                earum temporibus nesciunt veniam deleniti dolor quis aliquam
-                sapiente porro dolore quae reprehenderit? Iusto explicabo
-                consequuntur cum! At fugiat maxime vero voluptatibus.
-              </p>
-            </section>
-            <section id="computer-science">
-              <h2>Computer Science</h2>
-              <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
-                sit totam aperiam. Ducimus repellendus soluta porro, voluptas
-                voluptates nemo inventore quod molestiae libero aperiam at!
-                Omnis obcaecati quaerat molestias explicabo consequuntur laborum
-                aspernatur voluptatum magni nostrum, doloribus ab rerum
-                laboriosam ea aliquam ratione vero accusantium, eius sit porro
-                doloremque deserunt. Sequi dolorum harum quaerat, impedit
-                inventore at architecto eaque quam incidunt minima deserunt,
-                consequuntur perferendis! Facilis vitae nostrum dolores totam
-                cum provident obcaecati rerum, unde numquam quas repellendus
-                earum temporibus nesciunt veniam deleniti dolor quis aliquam
-                sapiente porro dolore quae reprehenderit? Iusto explicabo
-                consequuntur cum! At fugiat maxime vero voluptatibus.
-              </p>
-            </section>
-          </div>
-        </div>
-        <!-- CONTENT -->
+        </footer>
       </div>
-
-      <footer id="footer" class="section bg-dark footer-text-light">
-        <div class="container">
-          <ul
-            class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3"
-          >
-            <li>
-              <a
-                data-toggle="tooltip"
-                href="https://www.linkedin.com/in/rodrigo-javier-gd/"
-                target="_blank"
-                title=""
-                data-original-title="Professional Profile"
-                ><i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-
-            <li>
-              <a
-                data-toggle="tooltip"
-                href="https://www.github.com/RodrigoJavier101/"
-                target="_blank"
-                title=""
-                data-original-title="My main repository"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                data-toggle="tooltip"
-                href="https://rodrigojavier101.github.io/youtube-channel/"
-                target="_blank"
-                title=""
-                data-original-title="YT channel"
-                ><i class="fab fa-youtube"></i
-              ></a>
-            </li>
-          </ul>
-          <p class="text-center">Rodrigo Javier &trade; 2025</p>
-          <p class="text-2 text-center mb-0">
-            With the help of
-            <a
-              class="btn-link"
-              target="_blank"
-              href="http://www.harnishdesign.net/"
-              >HarnishDesign</a
-            >.
-          </p>
-        </div>
-      </footer>
-    </div>
+   
 
     <a
       id="back-to-top"
