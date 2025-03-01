@@ -50,11 +50,12 @@
     $(".dropdown li").on("mouseenter mouseleave", function (e) {
       if ($(window).width() > 991) {
         var elm = $(".dropdown-menu", this);
-        var off = elm.offset();
-        var l = off.left;
+        // var off = elm.offset();
+        // var l = off.left;
         var w = elm.width();
         var docW = $(window).width();
-        var isEntirelyVisible = l + w + 30 <= docW;
+        // var isEntirelyVisible = l + w + 30 <= docW;
+        var isEntirelyVisible = w + 30 <= docW;
         if (!isEntirelyVisible) {
           $(elm).addClass("dropdown-menu-right");
         } else {
