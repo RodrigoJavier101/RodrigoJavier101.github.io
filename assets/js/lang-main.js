@@ -30,9 +30,10 @@ link.forEach((el, i) =>
 
 async function changeLang(lang) {
   try {
-    const res = await fetch(`./lang-files/${lang}.json`);
+    const res = await fetch(
+      "./pages/home-content/" + "lang-files/" + lang + ".json"
+    );
     const data = await res.json();
-    console.log(data, "!!!");
     for (const key in data) {
       const elem = document.querySelector(`.lng-${key}`);
       elem.textContent = data[key];
