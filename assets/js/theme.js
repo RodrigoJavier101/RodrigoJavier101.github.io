@@ -104,6 +104,8 @@
 
   $(".smooth-scroll,.idocs-navigation a").on("click", function () {
     event.preventDefault();
+    console.log(".//./././");
+
     var sectionTo = $(this).attr("href");
     $("html, body")
       .stop()

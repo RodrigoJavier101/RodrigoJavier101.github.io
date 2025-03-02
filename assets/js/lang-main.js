@@ -30,8 +30,9 @@ link.forEach((el, i) =>
 
 async function changeLang(lang) {
   try {
+    const route_page = "home-content";
     const res = await fetch(
-      "./pages/home-content/" + "lang-files/" + lang + ".json"
+      "./pages/" + route_page + "/lang-files/" + lang + ".json"
     );
     const data = await res.json();
     for (const key in data) {
