@@ -46,6 +46,7 @@
       $(this).css("margin-left", "-" + (i + 5) + "px");
     }
   });
+
   $(function () {
     $(".dropdown li").on("mouseenter mouseleave", function (e) {
       if ($(window).width() > 991) {
@@ -104,8 +105,6 @@
 
   $(".smooth-scroll,.idocs-navigation a").on("click", function () {
     event.preventDefault();
-    console.log(".//./././");
-
     var sectionTo = $(this).attr("href");
     $("html, body")
       .stop()
