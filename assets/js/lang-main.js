@@ -30,7 +30,7 @@ link.forEach((el, i) =>
 
 async function changeLang(lang) {
   try {
-    const route_page = "home-content";
+    const route_page = "chunks";
     const res = await fetch(
       "./pages/" + route_page + "/lang-files/" + lang + ".json"
     );
