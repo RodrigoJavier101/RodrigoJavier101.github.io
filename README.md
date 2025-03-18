@@ -2,7 +2,7 @@
 Includes portfolio and a blog.
 
 ## Web Page:
-<a href="https://https://rodrigojavier101.github.io/">RODRIGO JAVIER Portfolio</a>
+<a href="https://rodrigojavier101.github.io/">RODRIGO JAVIER Portfolio</a>
 
 # Thanks to
 iDocs free one page documentation html template built with Bootstrap 4. 
