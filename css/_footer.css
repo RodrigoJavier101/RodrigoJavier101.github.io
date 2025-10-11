@@ -1,0 +1,50 @@
+
+/* Footer (Glassmorphism) */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height);
+  padding: 1rem 2rem 0.5rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+
+  /* Glassmorphism: Fondo semi-transparente */
+
+  background-color: rgba(var(--glass-base-rgb), var(--glass-bg-opacity));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.social-links a {
+  color: var(--color-text-secondary);
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: var(--color-primary);
+}
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+}
