@@ -4,6 +4,14 @@ import { translations } from "./translations/translations.js";
 let currentLang = "en";
 let currentTheme = "dark";
 
+const youtubeUrls = {
+  en: "https://www.youtube.com/@DocendoDiscitur-EN",
+  es: "https://www.youtube.com/@DocendoDiscitur-ES",
+  tr: "https://www.youtube.com/@DocendoDiscitur-TR",
+  it: "https://www.youtube.com/@DocendoDiscitur-IT",
+  de: "https://www.youtube.com/@DocendoDiscitur-DE",
+};
+
 // --- Funciones ---
 function loadPage(pageName) {
   const content = document.querySelector(".content");
@@ -17,6 +25,12 @@ function setLanguage(lang) {
     const key = `nav_${el.dataset.page}`;
     el.textContent = translations[lang][key] || el.dataset.page;
   });
+  // ✅ Actualizar enlace de YouTube
+  const ytLink = document.getElementById("youtube-link");
+  if (ytLink) {
+    ytLink.href = youtubeUrls[lang] || youtubeUrls.en;
+    ytLink.setAttribute("href", ytLink.href); // asegura actualización
+  }
   // Recargar página actual
   const hash = window.location.hash.slice(1) || "home";
   const pageName = hash.startsWith("blog/") ? "blog" : hash;
@@ -75,6 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", currentTheme);
   document.getElementById("lang-switch").value = savedLang;
 
+  // ✅ Actualizar enlace de YouTube al cargar
+  const ytLink = document.getElementById("youtube-link");
+  if (ytLink) {
+    ytLink.href = youtubeUrls[currentLang] || youtubeUrls.en;
+  }
   // Eventos
   document.getElementById("lang-switch").addEventListener("change", (e) => {
     setLanguage(e.target.value);
