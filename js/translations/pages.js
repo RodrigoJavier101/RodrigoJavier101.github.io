@@ -56,5 +56,9 @@ export const pages = {
   },
 
   contact: (lang) =>
-    `<div class="page container"><h2>${translations[lang].contact_title}</h2><p>rodrigo@example.com</p></div>`,
+    `<div class="page container">
+      <h2>${translations[lang].contact_title}</h2>
+      <p>rodrigojaviergd@gmail.com</p>
+      <p>WSP: +56 996 095 384</p>
+    </div>`,
 };
