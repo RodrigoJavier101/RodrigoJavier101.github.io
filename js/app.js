@@ -1,16 +1,9 @@
 import { pages } from "./translations/pages.js";
 import { translations } from "./translations/translations.js";
+import { youtubeUrls } from "./translations/constants.js";
 
 let currentLang = "en";
 let currentTheme = "dark";
-
-const youtubeUrls = {
-  en: "https://www.youtube.com/@DocendoDiscitur-EN",
-  es: "https://www.youtube.com/@DocendoDiscitur-ES",
-  tr: "https://www.youtube.com/@DocendoDiscitur-TR",
-  it: "https://www.youtube.com/@DocendoDiscitur-IT",
-  de: "https://www.youtube.com/@DocendoDiscitur-DE",
-};
 
 // --- Funciones ---
 function loadPage(pageName) {
@@ -72,11 +65,9 @@ function renderPage() {
 
 function updateCurrentDate(lang = "en") {
   const now = new Date();
-  const options = { year: "numeric" }; // Solo año, como en tu HTML
-  document.getElementById("current-year").textContent = now.toLocaleDateString(
-    lang,
-    options
-  );
+  const options = { year: "numeric", month: "long" };
+  const formattedDate = now.toLocaleDateString(lang, options);
+  document.getElementById("current-date").textContent = formattedDate;
 }
 
 // --- Inicialización ---

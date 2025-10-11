@@ -12,6 +12,7 @@ export const translations = {
     nav_projects: "Projects",
     nav_blog: "Blog",
     nav_contact: "Contact",
+    nav_docendo: "DocendoDiscitur-EN",
   },
   es: {
     home_title: "Hola, soy Rodrigo",
@@ -26,5 +27,6 @@ export const translations = {
     nav_projects: "Proyectos",
     nav_blog: "Blog",
     nav_contact: "Contacto",
+    nav_docendo: "DocendoDiscitur-ES",
   },
 };
