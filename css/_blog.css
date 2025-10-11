@@ -35,18 +35,3 @@
   text-decoration: underline;
 }
 
-/* Código */
-pre {
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-code {
-  font-family: Consolas, Monaco, monospace;
-  font-size: 0.95em;
-}
-
-pre code {
-  display: block;
-  padding: 0.5em;
-}

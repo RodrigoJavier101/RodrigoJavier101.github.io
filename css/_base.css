@@ -8,6 +8,9 @@
   --accent-hover: #689d6a; /* verde suave */
   --border: #504945;
   --code-bg: #3c3836;
+
+  --color-primary: var(--accent);
+  --color-text-secondary: var(--text-secondary);
 }
 
 [data-theme="light"] {

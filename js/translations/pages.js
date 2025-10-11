@@ -1,10 +1,19 @@
-
 import { translations } from "./translations.js";
 import { blogPosts } from "./blogPosts.js";
 
 export const pages = {
-  home: (lang) => `<div class="page container">...</div>`,
-  about: (lang) => `<div class="page container">...</div>`,
+  home: (lang) => `
+  <div class="page container">
+    <h1>${translations[lang].home_title}</h1>
+    <p>${translations[lang].home_desc}</p>
+  </div>
+`,
+  about: (lang) => `
+  <div class="page container">
+    <h2>${translations[lang].about_title}</h2>
+    <p>${translations[lang].about_text}</p>
+  </div>
+`,
   projects: (lang) =>
     `<div class="page container"><h2>${translations[lang].projects_title}</h2><p>Check my GitHub!</p></div>`,
 

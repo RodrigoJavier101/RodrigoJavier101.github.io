@@ -105,30 +105,6 @@ p {
   color: var(--text-secondary);
 }
 
-/* --- Footer fijo --- */
-.footer {
-  padding: 1.5rem 0;
-  background-color: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.social a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin: 0 0.6rem;
-}
-
-.social a:hover {
-  color: var(--accent);
-}
-
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .navbar .container {
@@ -168,4 +144,20 @@ p {
   overflow: visible; /* 💥 ESTO ES CRUCIAL PARA OCULTAR LOS PUNTOS BLANCOS */
   /* Puedes añadir un fondo o borde para que se vea mejor si lo necesitas */
   /* background-color: var(--color-bg-secondary); */
+}
+
+/* Código */
+pre {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.95em;
+}
+
+pre code {
+  display: block;
+  padding: 0.5em;
 }
