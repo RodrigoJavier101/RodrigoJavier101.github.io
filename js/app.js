@@ -11,6 +11,14 @@ function loadPage(pageName) {
   content.innerHTML = pages[pageName](currentLang);
 }
 
+// Añade esta función en app.js (fuera de cualquier otra función)
+function extractVideoId(url) {
+  const regExp =
+    /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return match && match[2].length === 11 ? match[2] : null;
+}
+
 function setLanguage(lang) {
   currentLang = lang;
   // Actualizar menú
@@ -92,6 +100,39 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("theme-toggle")
     .addEventListener("click", toggleTheme);
+
+  // Modal de YouTube
+  const modal = document.getElementById("youtube-modal");
+  const closeButton = document.querySelector(".close-button");
+  const embedContainer = document.getElementById("youtube-embed-container");
+
+  // Delegación de eventos para botones dinámicos
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("youtube-btn") ||
+      e.target.classList.contains("youtube-btn-small")
+    ) {
+      const videoId = e.target.getAttribute("data-video");
+      if (videoId) {
+        embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        modal.style.display = "flex";
+      }
+    }
+  });
+
+  // Cerrar modal
+  closeButton.addEventListener("click", () => {
+    embedContainer.innerHTML = "";
+    modal.style.display = "none";
+  });
+
+  // Cerrar al hacer clic fuera del video
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      embedContainer.innerHTML = "";
+      modal.style.display = "none";
+    }
+  });
 
   // Inicializar
   updateCurrentDate(currentLang);

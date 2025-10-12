@@ -47,32 +47,36 @@ export const pages = {
       <p>Check my GitHub!</p>
     </div>`,
 
-blog: (lang) => {
-  const posts = blogPosts[lang] || blogPosts.en;
-  const postList = posts
-    .map((post) => {
-      const youtubeBtn = post.youtubeUrl
-        ? `<a href="${post.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="youtube-link-small">🎥 Video</a>`
-        : "";
+  blog: (lang) => {
+    const posts = blogPosts[lang] || blogPosts.en;
+    const postList = posts
+      .map((post) => {
+        const youtubeBtn = post.youtubeUrl
+          ? `<button type="button" class="youtube-btn-small" data-video="${extractVideoId(
+              post.youtubeUrl
+            )}">🎥 Video</button>`
+          : "";
 
-      return `
+        return `
         <article class="blog-post-preview">
           <h3>
             <a href="#blog/${post.id}">${post.title}</a>
           </h3>
-          <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(lang)}</time>
+          <time datetime="${post.date}">${new Date(
+          post.date
+        ).toLocaleDateString(lang)}</time>
           <p>${post.excerpt}</p>
           ${youtubeBtn}
         </article>
       `;
-    })
-    .join("");
+      })
+      .join("");
 
-  return `<div class="page container">
+    return `<div class="page container">
             <h2>${translations[lang].blog_title}</h2>
             ${postList}
           </div>`;
-},
+  },
 
   // Blog post individual
   blogPost: (lang, postId) => {
@@ -83,9 +87,9 @@ blog: (lang) => {
 
     // Botón de YouTube (solo si existe la URL)
     const youtubeButton = post.youtubeUrl
-      ? `<a href="${post.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="youtube-link">
-         Watch on YouTube
-       </a>`
+      ? `<button type="button" class="youtube-btn" data-video="${extractVideoId(
+          post.youtubeUrl
+        )}">Watch on YouTube</button>`
       : "";
 
     return `
