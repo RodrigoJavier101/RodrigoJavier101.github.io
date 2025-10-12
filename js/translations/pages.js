@@ -24,7 +24,9 @@ export const pages = {
       .map(
         (post) => `
       <article class="blog-post-preview">
-        <h3><a href="#blog/${post.id}">${post.title}</a></h3>
+        <h3>
+          <a href="#blog/${post.id}">${post.title}</a>
+        </h3>
         <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
           lang
         )}</time>
