@@ -6,18 +6,47 @@ export const pages = {
   <div class="page container">
     <h1>${translations[lang].home_title}</h1>
     <p>${translations[lang].home_desc}</p>
+    <p>${translations[lang].home_body}</p>
   </div>
 `,
+
   about: (lang) => `
   <div class="page container">
     <h2>${translations[lang].about_title}</h2>
     <p>${translations[lang].about_text}</p>
+     <a 
+      href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume-android--.pdf" 
+      class="cv-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ${translations[lang].download_cv}
+    </a>
+       <a 
+      href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume-android--.pdf" 
+      class="cv-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ${translations[lang].download_eng_cert}
+    </a>
+    <a 
+      href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume-android--.pdf" 
+      class="cv-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ${translations[lang].download_}
+    </a>
   </div>
 `,
-  projects: (lang) =>
-    `<div class="page container"><h2>${translations[lang].projects_title}</h2><p>Check my GitHub!</p></div>`,
 
-  // Blog list
+  projects: (lang) =>
+    `<div class="page container">
+      <h2>${translations[lang].projects_title}</h2>
+      <p>Check my GitHub!</p>
+    </div>`,
+
   blog: (lang) => {
     const posts = blogPosts[lang] || blogPosts.en;
     const postList = posts
@@ -35,7 +64,9 @@ export const pages = {
     `
       )
       .join("");
-    return `<div class="page container"><h2>${translations[lang].blog_title}</h2>${postList}</div>`;
+    return `<div class="page container">
+              <h2>${translations[lang].blog_title}</h2>${postList}
+            </div>`;
   },
 
   // Blog post individual
@@ -43,15 +74,17 @@ export const pages = {
     const posts = blogPosts[lang] || blogPosts.en;
     const post = posts.find((p) => p.id === postId);
     if (!post)
-      return `<div class="page container"><p>Post not found.</p></div>`;
+      return `<div class="page container">
+                <p>Post not found.</p>
+              </div>`;
 
     return `
       <div class="page container blog-post">
         <a href="#blog" class="back-link">← Back to Blog</a>
         <h1>${post.title}</h1>
-        <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
-      lang
-    )}</time>
+        <time datetime="${post.date}">
+          ${new Date(post.date).toLocaleDateString(lang)}
+        </time>
         <div class="blog-content">${post.content}</div>
       </div>
     `;
