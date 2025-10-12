@@ -307,3 +307,40 @@ pre code {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
 }
+/* 
+
+*/
+.youtube-link {
+  display: inline-block;
+  margin: 1rem 0 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.youtube-link:hover {
+  background-color: #cc0000;
+  text-decoration: underline;
+}
+
+.youtube-link-small {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.youtube-link-small:hover {
+  background-color: #cc0000;
+  text-decoration: underline;
+}

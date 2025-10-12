@@ -47,47 +47,58 @@ export const pages = {
       <p>Check my GitHub!</p>
     </div>`,
 
-  blog: (lang) => {
-    const posts = blogPosts[lang] || blogPosts.en;
-    const postList = posts
-      .map(
-        (post) => `
-      <article class="blog-post-preview">
-        <h3>
-          <a href="#blog/${post.id}">${post.title}</a>
-        </h3>
-        <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
-          lang
-        )}</time>
-        <p>${post.excerpt}</p>
-      </article>
-    `
-      )
-      .join("");
-    return `<div class="page container">
-              <h2>${translations[lang].blog_title}</h2>${postList}
-            </div>`;
-  },
+blog: (lang) => {
+  const posts = blogPosts[lang] || blogPosts.en;
+  const postList = posts
+    .map((post) => {
+      const youtubeBtn = post.youtubeUrl
+        ? `<a href="${post.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="youtube-link-small">🎥 Video</a>`
+        : "";
+
+      return `
+        <article class="blog-post-preview">
+          <h3>
+            <a href="#blog/${post.id}">${post.title}</a>
+          </h3>
+          <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(lang)}</time>
+          <p>${post.excerpt}</p>
+          ${youtubeBtn}
+        </article>
+      `;
+    })
+    .join("");
+
+  return `<div class="page container">
+            <h2>${translations[lang].blog_title}</h2>
+            ${postList}
+          </div>`;
+},
 
   // Blog post individual
   blogPost: (lang, postId) => {
     const posts = blogPosts[lang] || blogPosts.en;
     const post = posts.find((p) => p.id === postId);
     if (!post)
-      return `<div class="page container">
-                <p>Post not found.</p>
-              </div>`;
+      return `<div class="page container"><p>Post not found.</p></div>`;
+
+    // Botón de YouTube (solo si existe la URL)
+    const youtubeButton = post.youtubeUrl
+      ? `<a href="${post.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="youtube-link">
+         Watch on YouTube
+       </a>`
+      : "";
 
     return `
-      <div class="page container blog-post">
-        <a href="#blog" class="back-link">← Back to Blog</a>
-        <h1>${post.title}</h1>
-        <time datetime="${post.date}">
-          ${new Date(post.date).toLocaleDateString(lang)}
-        </time>
-        <div class="blog-content">${post.content}</div>
-      </div>
-    `;
+    <div class="page container blog-post">
+      <a href="#blog" class="back-link">← Back to Blog</a>
+      <h1>${post.title}</h1>
+      <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
+      lang
+    )}</time>
+      ${youtubeButton}
+      <div class="blog-content">${post.content}</div>
+    </div>
+  `;
   },
 
   contact: (lang) =>
