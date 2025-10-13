@@ -32,7 +32,7 @@ export const blogPosts = {
       date: "2025-04-10",
       excerpt:
         "Aprende a escribir código JavaScript más limpio, rápido y mantenible.",
-      youtubeUrl: "https://www.youtube.com/watch?v=abc123", // mismo video o versión en español
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // mismo video o versión en español
       content: `
         <p>JavaScript es poderoso, pero es fácil caer en malos patrones.</p>
         <p>Consejo profesional: usa siempre <code>const</code> por defecto.</p>
@@ -44,7 +44,7 @@ export const blogPosts = {
       title: "Cómo Creé un Interruptor de Modo Oscuro",
       date: "2025-03-22",
       excerpt: "Un vistazo profundo a las variables CSS y localStorage.",
-      youtubeUrl: "https://www.youtube.com/watch?v=xyz789",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
         <p>El modo oscuro no es solo tendencia: reduce la fatiga visual.</p>
         <p>Usé <code>prefers-color-scheme</code> y <code>localStorage</code> para hacerlo persistente.</p>
