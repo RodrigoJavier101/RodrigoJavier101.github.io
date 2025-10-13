@@ -78,20 +78,20 @@ body {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 800;
+  font-size: 1.8rem;
   color: var(--accent);
   text-decoration: none;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   overflow: visible;
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -429,6 +429,14 @@ pre code {
 
 .youtube-btn-small:hover {
   background-color: #cc0000;
+}
+
+/* Estilo para el enlace activo en la navegación */
+nav a.active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 /* ========================================

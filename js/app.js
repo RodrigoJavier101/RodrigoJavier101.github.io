@@ -45,19 +45,31 @@ function toggleTheme() {
 
 function renderPage() {
   const hash = window.location.hash.slice(1) || "home";
+  const pageName = hash.startsWith("blog/") ? "blog" : hash;
 
+  // Renderizar contenido
   if (hash.startsWith("blog/")) {
     const postId = hash.split("/")[1];
     document.querySelector(".content").innerHTML = pages.blogPost(
       currentLang,
       postId
     );
-  } else if (pages[hash]) {
-    document.querySelector(".content").innerHTML = pages[hash](currentLang);
+  } else if (pages[pageName]) {
+    document.querySelector(".content").innerHTML = pages[pageName](currentLang);
   } else {
     window.location.hash = "home";
     document.querySelector(".content").innerHTML = pages.home(currentLang);
   }
+
+  // ✅ Actualizar enlace activo en el menú
+  document.querySelectorAll("nav a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href === `#${pageName}`) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 
   // Estilos para código
   document.querySelectorAll("pre code").forEach((block) => {
@@ -67,7 +79,6 @@ function renderPage() {
     block.parentElement.style.overflowX = "auto";
   });
 }
-
 function updateCurrentDate(lang = "en") {
   const now = new Date();
   const options = { year: "numeric", month: "long" };
