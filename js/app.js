@@ -151,4 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPage();
 });
 
+window.checkAdminPass = function () {
+  const pass = document.getElementById("admin-pass").value;
+  if (pass === "tuclave123") {
+    // ❌ visible en el código fuente
+    document.getElementById("admin-content").style.display = "block";
+  } else {
+    alert("Clave incorrecta");
+  }
+};
+
 window.addEventListener("hashchange", renderPage);
