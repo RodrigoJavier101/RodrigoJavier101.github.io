@@ -47,62 +47,55 @@ export const pages = {
       <p>Check my GitHub!</p>
     </div>`,
 
+  // ✅ Blog: lista de posts
   blog: (lang) => {
     const posts = blogPosts[lang] || blogPosts.en;
     const postList = posts
       .map((post) => {
         const youtubeBtn = post.youtubeUrl
-          ? `<button type="button" class="youtube-btn-small" data-video="${extractVideoId(
-              post.youtubeUrl
-            )}">🎥 Video</button>`
+          ? `<button type="button" class="youtube-btn-small" data-youtube-url="${post.youtubeUrl}">🎥 Video</button>`
           : "";
-
         return `
-        <article class="blog-post-preview">
-          <h3>
-            <a href="#blog/${post.id}">${post.title}</a>
-          </h3>
-          <time datetime="${post.date}">${new Date(
+          <article class="blog-post-preview">
+            <h3><a href="#blog/${post.id}">${post.title}</a></h3>
+            <time datetime="${post.date}">${new Date(
           post.date
         ).toLocaleDateString(lang)}</time>
-          <p>${post.excerpt}</p>
-          ${youtubeBtn}
-        </article>
-      `;
+            <p>${post.excerpt}</p>
+            ${youtubeBtn}
+          </article>
+        `;
       })
       .join("");
-
     return `<div class="page container">
-            <h2>${translations[lang].blog_title}</h2>
-            ${postList}
-          </div>`;
+              <h2>${translations[lang].blog_title}</h2>
+              ${postList}
+            </div>`;
   },
 
-  // Blog post individual
+  // ✅ Blog post individual
   blogPost: (lang, postId) => {
     const posts = blogPosts[lang] || blogPosts.en;
     const post = posts.find((p) => p.id === postId);
-    if (!post)
+    if (!post) {
       return `<div class="page container"><p>Post not found.</p></div>`;
+    }
 
-    // Botón de YouTube (solo si existe la URL)
-    const youtubeButton = post.youtubeUrl
-      ? `<button type="button" class="youtube-btn" data-video="${extractVideoId(
-          post.youtubeUrl
-        )}">Watch on YouTube</button>`
+    const youtubeBtn = post.youtubeUrl
+      ? `<button type="button" class="youtube-btn" data-youtube-url="${post.youtubeUrl}">Watch on YouTube</button>`
       : "";
 
     return `
-    <div class="page container blog-post">
-      <a href="#blog" class="back-link">← Back to Blog</a>
-      <h1>${post.title}</h1>
-      <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
+      <div class="page container blog-post">
+        <a href="#blog" class="back-link">← Back to Blog</a>
+        <h1>${post.title}</h1>
+        <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(
       lang
     )}</time>
-      ${youtubeButton}
-      <div class="blog-content">${post.content}</div>
-    </div>
-  `;
+        ${youtubeBtn}
+        <div class="blog-content">${post.content}</div>
+      </div>
+    `;
   },
 
   contact: (lang) =>

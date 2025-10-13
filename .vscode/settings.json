@@ -1,0 +1,39 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "quokka.colors": {
+    "covered": "#62b455",
+    "errorPath": "#ffa0a0",
+    "errorSource": "#fe536a",
+    "notCovered": "#cccccc",
+    "partiallyCovered": "#d2a032"
+  },
+  "peacock.color": "#003153",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#004f86",
+    "activityBar.background": "#004f86",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#200013",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#004f86",
+    "statusBar.background": "#003153",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#004f86",
+    "statusBarItem.remoteBackground": "#003153",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#003153",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#00315399",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "liveServer.settings.port": 5502,
+  
+}

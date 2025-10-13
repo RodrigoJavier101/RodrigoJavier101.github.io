@@ -5,13 +5,7 @@ import { youtubeUrls } from "./translations/constants.js";
 let currentLang = "en";
 let currentTheme = "dark";
 
-// --- Funciones ---
-function loadPage(pageName) {
-  const content = document.querySelector(".content");
-  content.innerHTML = pages[pageName](currentLang);
-}
-
-// Añade esta función en app.js (fuera de cualquier otra función)
+// ✅ Función para extraer ID de YouTube
 function extractVideoId(url) {
   const regExp =
     /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -19,20 +13,23 @@ function extractVideoId(url) {
   return match && match[2].length === 11 ? match[2] : null;
 }
 
+function loadPage(pageName) {
+  const content = document.querySelector(".content");
+  content.innerHTML = pages[pageName](currentLang);
+}
+
 function setLanguage(lang) {
   currentLang = lang;
-  // Actualizar menú
   document.querySelectorAll("[data-page]").forEach((el) => {
     const key = `nav_${el.dataset.page}`;
     el.textContent = translations[lang][key] || el.dataset.page;
   });
-  // ✅ Actualizar enlace de YouTube
+
   const ytLink = document.getElementById("youtube-link");
   if (ytLink) {
     ytLink.href = youtubeUrls[lang] || youtubeUrls.en;
-    ytLink.setAttribute("href", ytLink.href); // asegura actualización
   }
-  // Recargar página actual
+
   const hash = window.location.hash.slice(1) || "home";
   const pageName = hash.startsWith("blog/") ? "blog" : hash;
   loadPage(pageName);
@@ -62,7 +59,7 @@ function renderPage() {
     document.querySelector(".content").innerHTML = pages.home(currentLang);
   }
 
-  // Estilos básicos para código
+  // Estilos para código
   document.querySelectorAll("pre code").forEach((block) => {
     block.parentElement.style.backgroundColor = "var(--code-bg)";
     block.parentElement.style.padding = "1rem";
@@ -74,13 +71,14 @@ function renderPage() {
 function updateCurrentDate(lang = "en") {
   const now = new Date();
   const options = { year: "numeric", month: "long" };
-  const formattedDate = now.toLocaleDateString(lang, options);
-  document.getElementById("current-date").textContent = formattedDate;
+  document.getElementById("current-date").textContent = now.toLocaleDateString(
+    lang,
+    options
+  );
 }
 
 // --- Inicialización ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Cargar preferencias
   const savedLang = localStorage.getItem("lang") || "en";
   const savedTheme = localStorage.getItem("theme") || "dark";
   currentLang = savedLang;
@@ -88,12 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", currentTheme);
   document.getElementById("lang-switch").value = savedLang;
 
-  // ✅ Actualizar enlace de YouTube al cargar
   const ytLink = document.getElementById("youtube-link");
   if (ytLink) {
     ytLink.href = youtubeUrls[currentLang] || youtubeUrls.en;
   }
-  // Eventos
+
   document.getElementById("lang-switch").addEventListener("change", (e) => {
     setLanguage(e.target.value);
   });
@@ -101,32 +98,37 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("theme-toggle")
     .addEventListener("click", toggleTheme);
 
-  // Modal de YouTube
+  // ✅ Modal de YouTube
   const modal = document.getElementById("youtube-modal");
   const closeButton = document.querySelector(".close-button");
   const embedContainer = document.getElementById("youtube-embed-container");
 
-  // Delegación de eventos para botones dinámicos
+  // 👇 Usa data-youtube-url (no data-video)
   document.addEventListener("click", (e) => {
     if (
       e.target.classList.contains("youtube-btn") ||
       e.target.classList.contains("youtube-btn-small")
     ) {
-      const videoId = e.target.getAttribute("data-video");
+      console.log("Botón clicado:", e.target);
+      const fullUrl = e.target.getAttribute("data-youtube-url");
+      console.log("URL completa:", fullUrl);
+      const videoId = extractVideoId(fullUrl);
+      console.log("Video ID extraído:", videoId);
+
       if (videoId) {
         embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
         modal.style.display = "flex";
+      } else {
+        console.error("No se pudo extraer el ID de YouTube de:", fullUrl);
       }
     }
   });
 
-  // Cerrar modal
   closeButton.addEventListener("click", () => {
     embedContainer.innerHTML = "";
-    modal.style.display = "none";
+    modal.classList.remove("is-active");
   });
 
-  // Cerrar al hacer clic fuera del video
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       embedContainer.innerHTML = "";
@@ -134,10 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Inicializar
   updateCurrentDate(currentLang);
   renderPage();
 });
 
-// Navegación
 window.addEventListener("hashchange", renderPage);
