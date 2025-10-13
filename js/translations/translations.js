@@ -16,7 +16,7 @@ export const translations = {
     nav_projects: "Projects",
     nav_blog: "Blog",
     nav_contact: "Contact",
-    nav_docendo: "DocendoDiscitur-EN",
+    nav_docendo: "DocendoDiscitur",
 
     download_cv: "Download CV",
     download_eng_cert: "Download Eng Cert",
@@ -40,7 +40,7 @@ export const translations = {
     nav_projects: "Proyectos",
     nav_blog: "Blog",
     nav_contact: "Contacto",
-    nav_docendo: "DocendoDiscitur-ES",
+    nav_docendo: "DocendoDiscitur",
 
     download_cv: "Descargar CV",
     download_eng_cert: "Descargar Cert de Inglés",
