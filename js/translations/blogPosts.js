@@ -24,6 +24,83 @@ export const blogPosts = {
         <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
       `,
     },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
+    {
+      id: "dark-mode",
+      title: "How I Built a Dark Mode Toggle",
+      date: "2025-03-22",
+      excerpt: "A deep dive into CSS variables and localStorage.",
+      youtubeUrl: "", // 👈 ejemplo
+      content: `
+        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
+        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+      `,
+    },
   ],
   es: [
     {
