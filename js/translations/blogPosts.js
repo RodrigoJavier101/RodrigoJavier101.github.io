@@ -1,3 +1,8 @@
+import { db } from "./pages/firebase";
+
+
+
+
 export const blogPosts = {
   en: [
     {
@@ -26,19 +31,6 @@ export const blogPosts = {
     },
   ],
   es: [
-    {
-      id: "js-tips",
-      title: "5 Consejos de JavaScript que Todo Desarrollador Debe Saber",
-      date: "2025-04-10",
-      excerpt:
-        "Aprende a escribir código JavaScript más limpio, rápido y mantenible.",
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // mismo video o versión en español
-      content: `
-        <p>JavaScript es poderoso, pero es fácil caer en malos patrones.</p>
-        <p>Consejo profesional: usa siempre <code>const</code> por defecto.</p>
-        <pre><code>const usuario = { nombre: 'Rodrigo' };</code></pre>
-      `,
-    },
     {
       id: "dark-mode",
       title: "Cómo Creé un Interruptor de Modo Oscuro",
