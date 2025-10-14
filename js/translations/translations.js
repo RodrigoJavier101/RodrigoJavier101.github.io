@@ -2,7 +2,7 @@ export const translations = {
   en: {
     home_title: "Hi, I'm Rodrigo",
     home_desc: `Software Engineer & Content Creator.`,
-    home_body: `By now, I'm buildin this site little by little.`,
+    home_body: `By now, I'm buildin this site little by little. Just pay attention to the blog section.`,
 
     about_title: "About Me",
     about_text: "I build apps and share knowledge. ",
@@ -25,7 +25,7 @@ export const translations = {
   es: {
     home_title: "Hola, soy Rodrigo",
     home_desc: "Ingeniero de Software y Creador de Contenido",
-    home_body: `Por ahora, el sitio lo estoy construyento poco a poco.`,
+    home_body: `Por ahora, el sitio lo estoy construyento poco a poco. Solo presta atención a la sección de blog.`,
 
     about_title: "Sobre Mí",
     about_text: "Desarrollo apps y comparto conocimiento.",
