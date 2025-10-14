@@ -2,7 +2,8 @@ import { translations } from "../translations.js";
 import { blogPosts } from "../blogPosts.js";
 // import { getBlogs } from "./firebase.js";
 
-export const blog = async (lang) => {
+// mejor a mano, luego lo veo para poder suir blogs de acuerdo a lo que vay creciendo
+export const blog = (lang) => {
   // const blogs = await getBlogs();
   // const posts = blogs
   //   .map((b) => {
@@ -15,8 +16,6 @@ export const blog = async (lang) => {
   const posts = blogPosts[lang] || blogPosts.en;
   const postList = posts
     .map((post) => {
-      console.log(post.title);
-
       const youtubeBtn = post.youtubeUrl
         ? `<button type="button" class="youtube-btn-small" data-youtube-url="${post.youtubeUrl}">🎥 Video</button>`
         : "";
