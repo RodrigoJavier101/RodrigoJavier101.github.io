@@ -1,5 +1,9 @@
 import { translations } from "../translations.js";
 import { blogPosts } from "../blogPosts.js";
+import { getBlogs } from "./firebase.js";
+
+const blogs = getBlogs();
+console.log("in blog general???", blogs);
 
 export const blog = (lang) => {
   const posts = blogPosts[lang] || blogPosts.en;
@@ -11,7 +15,9 @@ export const blog = (lang) => {
       return `
         <article class="blog-post-preview">
           <h3><a href="#blog/${post.id}">${post.title}</a></h3>
-          <time datetime="${post.date}">${new Date(post.date).toLocaleDateString(lang)}</time>
+          <time datetime="${post.date}">${new Date(
+        post.date
+      ).toLocaleDateString(lang)}</time>
           <p>${post.excerpt}</p>
           ${youtubeBtn}
         </article>

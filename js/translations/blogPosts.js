@@ -1,8 +1,3 @@
-import { db } from "./pages/firebase";
-
-
-
-
 export const blogPosts = {
   en: [
     {
