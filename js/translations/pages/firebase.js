@@ -8,10 +8,10 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCOMYMkr3Tyn0I8a0qAurixhqm5Z4ynHhc",
-  authDomain: "rodrigo-portfolio-admin.firebaseapp.com",
+  apiKey: "AIzaSyCOMYMkr3Ty",
+  authDomain: "rodrigo-portfolio-admin.com",
   projectId: "rodrigo-portfolio-admin",
-  storageBucket: "rodrigo-portfolio-admin.firebasestorage.app",
+  storageBucket: "rodrigo-portfolio-admin.app",
   messagingSenderId: "823981414979",
   appId: "1:823981414979:web:f4a49e30173c46149352f6",
   measurementId: "G-P88R3L2TWR",
