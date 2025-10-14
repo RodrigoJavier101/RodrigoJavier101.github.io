@@ -79,12 +79,12 @@ const cargarBlogs = async function () {
   }
 };
 
-let blogs = [];
-const initBlogLoad = async () => {
-  blogs = await cargarBlogs();
-    console.log("in blog general .,., ", blogs);
-  return blogs;
-};
+// let blogs = [];
+// const initBlogLoad = async () => {
+//   blogs = await cargarBlogs();
+//   console.log("in blog general .,., ", blogs);
+//   return blogs;
+// };
 
-initBlogLoad();
-export const getBlogs = () => blogs;
+// initBlogLoad();
+export const getBlogs = async () => cargarBlogs();

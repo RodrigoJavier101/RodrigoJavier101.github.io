@@ -43,22 +43,21 @@ function toggleTheme() {
   localStorage.setItem("theme", currentTheme);
 }
 
-function renderPage() {
+async function renderPage() {
   const hash = window.location.hash.slice(1) || "home";
   const pageName = hash.startsWith("blog/") ? "blog" : hash;
 
+  let htmlContent;
   // Renderizar contenido
   if (hash.startsWith("blog/")) {
     const postId = hash.split("/")[1];
-    document.querySelector(".content").innerHTML = pages.blogPost(
-      currentLang,
-      postId
-    );
-  } else if (pages[pageName]) {
-    document.querySelector(".content").innerHTML = pages[pageName](currentLang);
+    // Si blogPost también es async, ajústalo
+    htmlContent = await pages.blogPost(currentLang, postId);
+  } else if (typeof pages[pageName] === "function") {
+    htmlContent = await pages[pageName](currentLang); // ✅ espera la promesa
   } else {
     window.location.hash = "home";
-    document.querySelector(".content").innerHTML = pages.home(currentLang);
+    htmlContent = await pages.home(currentLang);
   }
 
   // ✅ Actualizar enlace activo en el menú

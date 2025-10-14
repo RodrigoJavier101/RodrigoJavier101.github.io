@@ -2,13 +2,21 @@ import { translations } from "../translations.js";
 import { blogPosts } from "../blogPosts.js";
 import { getBlogs } from "./firebase.js";
 
-const blogs = getBlogs();
-console.log("in blog general???", blogs);
+export const blog = async (lang) => {
+  const blogs = await getBlogs();
+  const posts = blogs
+    .map((b) => {
+      if (b.lang === lang) {
+        return b;
+      }
+    })
+    .filter((c) => c !== undefined);
 
-export const blog = (lang) => {
-  const posts = blogPosts[lang] || blogPosts.en;
+  // const posts = blogPosts[lang] || blogPosts.en;
   const postList = posts
     .map((post) => {
+      console.log(post.title);
+
       const youtubeBtn = post.youtubeUrl
         ? `<button type="button" class="youtube-btn-small" data-youtube-url="${post.youtubeUrl}">🎥 Video</button>`
         : "";
