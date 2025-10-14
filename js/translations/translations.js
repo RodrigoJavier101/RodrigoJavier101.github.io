@@ -2,7 +2,7 @@ export const translations = {
   en: {
     home_title: "Hi, I'm Rodrigo",
     home_desc: `Software Engineer & Content Creator.`,
-    home_body: `By now, I'm buildin this site little by little. Just pay attention to the blog section and the projects that I'm working on.`,
+    home_body: `By now, I'm building this site little by little. Just pay attention to the blog section and the projects that I'm working on.`,
 
     about_title: "About Me",
     about_text: "I build apps and share knowledge. ",
