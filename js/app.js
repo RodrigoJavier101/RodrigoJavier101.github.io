@@ -1,6 +1,7 @@
 import { pages } from "./translations/pages.js";
 import { translations } from "./translations/translations.js";
 import { youtubeUrls } from "./translations/constants.js";
+import { projects } from "./translations/pages/projects.const.js";
 
 let currentLang = "en";
 let currentTheme = "dark";
@@ -97,11 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", currentTheme);
   document.getElementById("lang-switch").value = savedLang;
 
+  // Actualizar enlace de YouTube en el footer
   const ytLink = document.getElementById("youtube-link");
   if (ytLink) {
     ytLink.href = youtubeUrls[currentLang] || youtubeUrls.en;
   }
 
+  // Eventos de UI
   document.getElementById("lang-switch").addEventListener("change", (e) => {
     setLanguage(e.target.value);
   });
@@ -109,44 +112,97 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("theme-toggle")
     .addEventListener("click", toggleTheme);
 
-  // ✅ Modal de YouTube
-  const modal = document.getElementById("youtube-modal");
-  const closeButton = document.querySelector(".close-button");
+  // === Modal de YouTube ===
+  const youtubeModal = document.getElementById("youtube-modal");
+  const youtubeClose = document.querySelector(".close-button");
   const embedContainer = document.getElementById("youtube-embed-container");
 
-  // 👇 Usa data-youtube-url (no data-video)
+  // Delegación: botones de YouTube
   document.addEventListener("click", (e) => {
     if (
       e.target.classList.contains("youtube-btn") ||
       e.target.classList.contains("youtube-btn-small")
     ) {
-      console.log("Botón clicado:", e.target);
       const fullUrl = e.target.getAttribute("data-youtube-url");
-      console.log("URL completa:", fullUrl);
       const videoId = extractVideoId(fullUrl);
-      console.log("Video ID extraído:", videoId);
-
       if (videoId) {
         embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-        modal.style.display = "flex";
+        youtubeModal.style.display = "flex";
       } else {
-        console.error("No se pudo extraer el ID de YouTube de:", fullUrl);
+        console.error("URL de YouTube inválida:", fullUrl);
       }
     }
   });
 
-  closeButton.addEventListener("click", () => {
-    embedContainer.innerHTML = "";
-    modal.classList.remove("is-active");
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
+  // Cerrar modal de YouTube
+  if (youtubeClose) {
+    youtubeClose.addEventListener("click", () => {
       embedContainer.innerHTML = "";
-      modal.style.display = "none";
+      youtubeModal.style.display = "none";
+    });
+  }
+  window.addEventListener("click", (e) => {
+    if (e.target === youtubeModal) {
+      embedContainer.innerHTML = "";
+      youtubeModal.style.display = "none";
     }
   });
 
+  // === Modal de Proyectos ===
+  const projectModal = document.getElementById("project-modal");
+  const projectClose = document.querySelector(".close-project");
+
+  // Delegación: cards de proyecto
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".project-card")) {
+      const card = e.target.closest(".project-card");
+      const projectId = card.getAttribute("data-project-id");
+      const projList = projects[currentLang] || projects.en;
+      const project = projList.find((p) => p.id === projectId);
+
+      if (project) {
+        const content = `
+          <h2>${project.title}</h2>
+          <p>${project.description}</p>
+          <div class="tech-tags">
+            ${project.tech
+              .map((tag) => `<span class="tech-tag">${tag}</span>`)
+              .join("")}
+          </div>
+          <div class="modal-buttons">
+            ${
+              project.liveUrl
+                ? `<a href="${project.liveUrl}" target="_blank" class="btn-live">Ver en vivo</a>`
+                : ""
+            }
+            ${
+              project.githubUrl
+                ? `<a href="${project.githubUrl}" target="_blank" class="btn-github">Código en GitHub</a>`
+                : ""
+            }
+          </div>
+        `;
+        document.getElementById("project-modal-content").innerHTML = content;
+        projectModal.classList.add("is-active");
+      }
+    }
+  });
+
+  // Cerrar modal de proyecto
+  if (projectClose) {
+    projectClose.addEventListener("click", () => {
+      projectModal.classList.remove("is-active");
+    });
+  }
+  if (projectModal) {
+    projectModal.addEventListener("click", (e) => {
+      if (e.target === projectModal) {
+        projectModal.classList.remove("is-active");
+      }
+    });
+  }
+
+  // === Renderizar página inicial ===
   updateCurrentDate(currentLang);
   renderPage();
 });

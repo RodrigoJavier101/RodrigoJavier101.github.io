@@ -78,7 +78,6 @@
 //     return [{ error: "Error al cargar los blogs: " + error.message }];
 //   }
 // };
-
 // // let blogs = [];
 // // const initBlogLoad = async () => {
 // //   blogs = await cargarBlogs();

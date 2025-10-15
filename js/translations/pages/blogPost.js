@@ -1,6 +1,6 @@
 import { blogPosts } from "../blogPosts.js";
 
-export const blogPost = async (lang, postId) => {
+export const blogPost =  (lang, postId) => {
   const posts = blogPosts[lang] || blogPosts.en;
   const post = posts.find((p) => p.id === postId);
 
