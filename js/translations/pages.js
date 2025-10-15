@@ -9,7 +9,7 @@ import { contact } from "./pages/contact.js";
 export const pages = {
   home,
   about,
-  projectsPage,
+  projects: projectsPage,
   blog,
   blogPost,
   contact,
