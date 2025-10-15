@@ -6,8 +6,9 @@ export const projects = {
       description: "A multilingual educational platform for developers.",
       tech: ["JavaScript", "Firebase", "CSS"],
       liveUrl: "https://rodrigojavier101.github.io",
-      githubUrl: "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
-      image: "assets/images/docendo-preview.png"
+      githubUrl:
+        "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      image: "assets/images/docendo-preview.png",
     },
     {
       id: "code-chunks",
@@ -16,8 +17,8 @@ export const projects = {
       tech: ["YouTube", "Video Editing", "JavaScript"],
       liveUrl: "https://www.youtube.com/@CodeChunksEs",
       githubUrl: null,
-      image: "assets/images/codechunks-preview.png"
-    }
+      image: "assets/images/codechunks-preview.png",
+    },
   ],
   es: [
     {
@@ -26,17 +27,96 @@ export const projects = {
       description: "Plataforma educativa multilingüe para desarrolladores.",
       tech: ["JavaScript", "Firebase", "CSS"],
       liveUrl: "https://rodrigojavier101.github.io",
-      githubUrl: "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
-      image: "assets/images/docendo-preview.png"
+      githubUrl:
+        "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      image: "assets/images/docendo-preview.png",
     },
     {
       id: "code-chunks",
       title: "Code Chunks",
-      description: "Canal de YouTube con tutoriales de programación en español.",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
       tech: ["YouTube", "Edición de video", "JavaScript"],
       liveUrl: "https://www.youtube.com/@CodeChunksEs",
       githubUrl: null,
-      image: "assets/images/codechunks-preview.png"
-    }
-  ]
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+    ,
+    {
+      id: "code-chunks",
+      title: "Code Chunks",
+      description:
+        "Canal de YouTube con tutoriales de programación en español.",
+      tech: ["YouTube", "Edición de video", "JavaScript"],
+      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      githubUrl: null,
+      image: "assets/images/codechunks-preview.png",
+    },
+  ],
 };
