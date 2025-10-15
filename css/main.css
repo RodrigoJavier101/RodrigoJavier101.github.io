@@ -482,8 +482,8 @@ nav a.active {
 }
 
 /* Modal de proyecto */
-project-modal {
-  position: fixed;
+.project-modal {
+  position: fixed; /* ← clave: fijo en la ventana */
   top: 0;
   left: 0;
   width: 100%;
@@ -492,19 +492,14 @@ project-modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 2000; /* ← debe estar por encima de todo */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 .project-modal.is-active {
   opacity: 1;
   visibility: visible;
-}
-
-.project-modal.is-active .modal-content-project {
-  transform: translateY(0);
 }
 
 .modal-content-project {
@@ -515,20 +510,24 @@ project-modal {
   max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
-  position: relative;
   padding: 2rem;
+  position: relative;
   transform: translateY(10px);
   transition: transform 0.3s ease;
+}
+
+.project-modal.is-active .modal-content-project {
+  transform: translateY(0);
 }
 
 .close-project {
   position: absolute;
   top: 1rem;
   right: 1.2rem;
-  font-size: 1.5rem;
-  color: var(--text-secondary);
   background: none;
   border: none;
+  font-size: 1.8rem;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
