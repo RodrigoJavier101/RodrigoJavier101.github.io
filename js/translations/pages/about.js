@@ -4,7 +4,7 @@ export const about = (lang) => `
   <div class="page container">
     <h2>${translations[lang].about_title}</h2>
     <p>${translations[lang].about_text}</p>
-    <a href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume-android--.pdf" 
+    <a href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume.pdf" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
       ${translations[lang].download_cv}
     </a>

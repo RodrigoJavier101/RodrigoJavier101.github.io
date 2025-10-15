@@ -1,4 +1,3 @@
-// translations/pages/projects.js
 import { translations } from "../translations.js";
 import { projects } from "./projects.const.js";
 
