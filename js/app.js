@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const videoId = extractVideoId(fullUrl);
       if (videoId) {
         embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-        youtubeModal.style.display = "flex";
+        youtubeModal.classList.add("is-active");
       } else {
         console.error("URL de YouTube inválida:", fullUrl);
       }
@@ -138,13 +138,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (youtubeClose) {
     youtubeClose.addEventListener("click", () => {
       embedContainer.innerHTML = "";
-      youtubeModal.style.display = "none";
+      youtubeModal.classList.remove("is-active");
     });
   }
   window.addEventListener("click", (e) => {
     if (e.target === youtubeModal) {
       embedContainer.innerHTML = "";
-      youtubeModal.style.display = "none";
+      youtubeModal.classList.remove("is-active");
     }
   });
 
