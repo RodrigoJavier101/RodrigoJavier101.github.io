@@ -1,0 +1,132 @@
+/* Transición de Página (Fade) */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(13, 18, 28, var(--glass-bg-opacity));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  opacity: 0; /* Inicialmente invisible */
+  visibility: hidden; /* Inicialmente no interactuable */
+  z-index: 9999; /* Asegura que esté por encima de todo */
+  transition: opacity 0.4s ease-out, visibility 0s 0.4s;
+}
+.page-transition.is-active {
+  opacity: 1; /* Se vuelve visible */
+  visibility: visible;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Header y Navegación (Glassmorphism) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Glassmorphism: Fondo semi-transparente */
+  background-color: rgba(var(--glass-base-rgb), var(--glass-bg-opacity));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  /* 💥 MEJORA CLAVE: Asegura que la imagen se ajuste y se recorte */
+  object-fit: cover;
+
+  /* 💥 OPCIONAL: Puedes ajustar la posición del recorte si el logo no está centrado */
+  /* object-position: center; */
+
+  /* 💥 SOLUCIÓN ADICIONAL: Usar 'overflow: hidden' en el contenedor padre si la imagen
+     es más grande que el contenedor y se está saliendo */
+}
+
+/* 💥 SI EL PROBLEMA PERSISTE, APLICA EL OVERFLOW HIDDEN AL CONTENEDOR DEL LOGO */
+.logo {
+  /* Si .logo-img es el <img>, y <a> es el .logo, entonces el <a> debe ocultar el desbordamiento */
+  display: block; /* Asegura que el 'a' se comporte como un bloque para width/height */
+  width: 40px; /* Mismo tamaño que la imagen */
+  height: 40px; /* Mismo tamaño que la imagen */
+  border-radius: 50%; /* También lo hacemos circular */
+  overflow: hidden; /* 💥 ESTO ES CRUCIAL PARA OCULTAR LOS PUNTOS BLANCOS */
+  /* Puedes añadir un fondo o borde para que se vea mejor si lo necesitas */
+  /* background-color: var(--color-bg-secondary); */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+}
+nav a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-left: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--color-primary);
+}
+
+#language-selector {
+  background: none;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 0.8rem;
+  transition: all 0.3s;
+}
+#language-selector:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+#language-selector option {
+  color: var(--color-background);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+.theme-toggle:hover {
+  color: var(--color-primary);
+}
+/* Estilo del Sol (Dark Mode) y Luna (Light Mode) */
+.theme-toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}

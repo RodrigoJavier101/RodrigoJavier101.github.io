@@ -1,0 +1,91 @@
+/* Contenedor principal de artículos */
+.blog-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.blog-container h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--color-card);
+  padding-bottom: 0.5rem;
+}
+
+/* Grid de Artículos */
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  gap: 1.5rem; /* Espacio entre cada tarjeta/fila */
+}
+
+/* Estilo de Tarjeta de Artículo */
+.article-card {
+  background-color: var(--color-card);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+  display: flex;
+  flex-direction: row; /* 💥 CAMBIO: De columna a fila (diseño listado) */
+  align-items: center; /* Centrar verticalmente el contenido */
+  padding: 1rem 1.5rem; /* Relleno para que se vea como una fila ancha */
+}
+.article-card:hover {
+  transform: translateY(-2px); /* Menos movimiento en hover */
+  box-shadow: 0 6px 15px var(--shadow-color); /* Mejor feedback */
+}
+.article-card a {
+  text-decoration: none;
+  color: inherit;
+  display: contents; /* 💥 Importante: Permite que los elementos hijos se alineen directamente */
+}
+
+.article-content {
+  padding: 0; /* Eliminar el padding interno que teníamos antes */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-content h2 {
+  font-size: 1.3rem; /* Título ligeramente más pequeño */
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.article-content p {
+  font-size: 0.9rem; /* Sumario más pequeño */
+  color: var(--color-text-secondary);
+  margin-top: 0;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita el sumario a dos líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: unset;
+}
+
+.article-meta {
+  display: flex;
+  flex-direction: column; /* Apilar la fecha y el tag */
+  justify-content: flex-start;
+  align-items: flex-end; /* Alinear a la derecha de la fila */
+  flex-shrink: 0; /* No encogerse */
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-left: 2rem; /* Espacio del contenido principal */
+  padding-top: 0;
+  border-top: none; /* Eliminar la línea divisora interna */
+  text-align: right;
+  width: 120px; /* Ancho fijo para las meta-propiedades */
+}
+.article-meta .tag {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}

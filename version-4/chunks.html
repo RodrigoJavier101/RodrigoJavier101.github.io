@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
+    />
+    <link href="./assets/images/logo-big.png" rel="icon" />
+    <title>Chunks</title>
+    <meta
+      name="description"
+      content="Blog and prtfolio and other nice things"
+    />
+    <meta name="author" content="harnishdesign.net" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+  </head>
+
+  <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+    <div class="preloader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="main-wrapper" class="bg-light-4">
+      <!-- NAVBAR MENU -->
+      <header id="header" class="sticky-top">
+        <nav
+          class="primary-menu navbar navbar-expand-lg bg-dark navbar-text-light navbar-dropdown-dark border-0"
+        >
+          <div class="container-fluid">
+            <button
+              id="sidebarCollapse"
+              class="navbar-toggler d-block d-md-none"
+              type="button"
+            >
+              <span></span><span class="w-75"></span><span class="w-50"></span>
+            </button>
+
+            <a
+              href="/chunks"
+              class="logo ml-md-3"
+              title="iDocs Template"
+              onclick="route()"
+            >
+              <img
+                style="width: 70px; height: 70px; border-radius: 55%"
+                src="assets/images/calvin.png"
+                alt="iDocs Template"
+              />
+            </a>
+            <button
+              class="navbar-toggler ml-auto"
+              type="button"
+              data-toggle="collapse"
+              data-target="#header-nav"
+            >
+              <span></span><span></span><span></span>
+            </button>
+
+            <div
+              id="header-nav"
+              class="collapse navbar-collapse justify-content-end"
+            >
+              <ul class="navbar-nav text-1">
+                <li>
+                  <a class="dropdown" href="/chunks" onclick="route()"
+                    ><i class="fas fa-home"></i>&ThinSpace; Home</a
+                  >
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" onclick="route()"
+                    ><i class="fab fa-dochub"></i>&ThinSpace; TOPICS</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item text-0"
+                        href="/science"
+                        onclick="route()"
+                        >Science</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-0"
+                        href="/maths"
+                        onclick="route()"
+                        >Maths</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-0"
+                        href="/computer-science"
+                        onclick="route()"
+                        >Computer Science</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle" href="#"
+                    ><i class="fas fa-theater-masks"></i>&ThinSpace; ABOUT ME</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="text-0" href="./">|01 : Init</a>
+                    </li>
+                    <li>
+                      <a class="text-0" href="./about.html"
+                        >|02 : Me and my CV</a
+                      >
+                    </li>
+                    <li>
+                      <a class="text-0" href="./contact.html">|03 : Contact</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="dropdown langs">
+                  <a class="dropdown-toggle" href="#"
+                    ><i class="fas fa-language"></i>&ThinSpace; LANGS</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        id="lang-a"
+                        class="text-0 active-lan"
+                        href="#"
+                        data-lang="english"
+                        >English</a
+                      >
+                    </li>
+                    <li>
+                      <a id="lang-a" class="text-0" href="#" data-lang="spanish"
+                        >Español</a
+                      >
+                    </li>
+                    <li>
+                      <a id="lang-a" class="text-0" href="#" data-lang="italian"
+                        >Italiano</a
+                      >
+                    </li>
+                    <li>
+                      <a id="lang-a" class="text-0" href="#" data-lang="german"
+                        >Deutsche</a
+                      >
+                    </li>
+                    <li>
+                      <a id="lang-a" class="text-0" href="#" data-lang="turkish"
+                        >Türkçe</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+              <li class="social-icons-twitter">
+                <a
+                  data-toggle="tooltip"
+                  href="https://www.linkedin.com/in/rodrigo-javier-gd/"
+                  target="_blank"
+                  title=""
+                  data-original-title="Prof-Profile"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="social-icons-facebook">
+                <a
+                  data-toggle="tooltip"
+                  href="https://www.github.com/RodrigoJavier101/"
+                  target="_blank"
+                  title=""
+                  data-original-title="The-Repo"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="social-icons-dribbble">
+                <a
+                  data-toggle="tooltip"
+                  href="https://rodrigojavier101.github.io/youtube-channel/"
+                  target="_blank"
+                  title=""
+                  data-original-title="YT-Channels"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- NAVBAR MENU -->
+
+      <div id="root">
+        <div id="main-page"></div>
+      </div>
+
+      <!-- <footer id="footer" class="section bg-dark footer-text-light">
+        <div class="container">
+          <ul
+            class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3"
+          >
+            <li>
+              <a
+                data-toggle="tooltip"
+                href="https://www.linkedin.com/in/rodrigo-javier-gd/"
+                target="_blank"
+                title=""
+                data-original-title="Professional Profile"
+                ><i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                data-toggle="tooltip"
+                href="https://www.github.com/RodrigoJavier101/"
+                target="_blank"
+                title=""
+                data-original-title="My main repository"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                data-toggle="tooltip"
+                href="https://rodrigojavier101.github.io/youtube-channel/"
+                target="_blank"
+                title=""
+                data-original-title="YT channel"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+          <p class="text-center">Rodrigo Javier &trade; 2025</p>
+          <p class="text-2 text-center mb-0">
+            With the help of
+            <a
+              class="btn-link"
+              target="_blank"
+              href="http://www.harnishdesign.net/"
+              >HarnishDesign</a
+            >.
+          </p>
+        </div>
+      </footer> -->
+    </div>
+
+    <a
+      id="back-to-top"
+      data-toggle="tooltip"
+      title="Back to Top"
+      href="javascript:void(0)"
+    >
+      <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <script src="./assets/js/jquery-370.js"></script>
+    <!-- <script src="./assets/vendor/jquery/jquery.min.js"></script> -->
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/highlight.js/highlight.min.js"></script>
+    <script src="./assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="./assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/router.js"></script>
+    <script src="./assets/js/lang-main.js"></script>
+    <script src="./assets/js/side-bar.js"></script>
+  </body>
+</html>

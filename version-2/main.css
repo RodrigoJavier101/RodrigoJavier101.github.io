@@ -1,0 +1,18 @@
+/* ==================================== */
+/* === main.css === */
+/* ==================================== */
+
+/* 1. Variables y configuraciones base (debe ir primero) */
+@import url("_variables_base.css");
+
+/* 2. Estilos globales y layout del cuerpo */
+@import url("_layout.css");
+
+/* 3. Header, navegación y transición de página */
+@import url("_header_nav.css");
+
+/* 4. Estilos del contenido principal y las tarjetas */
+@import url("_articles.css");
+
+/* 5. Footer y enlaces sociales */
+@import url("_footer.css");

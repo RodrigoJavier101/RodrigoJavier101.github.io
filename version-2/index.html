@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodrigo Javier | Blog</title>
+
+    <link href="assets/images/logo-big.png" rel="icon" type="image/png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <div class="page-transition" id="page-transition-layer"></div>
+    <header>
+      <a href="#" class="logo">
+        <img
+          src="assets/images/logo-big.png"
+          alt="Logo Blog"
+          class="logo-img"
+        />
+      </a>
+      <nav>
+        <a href="#articulos">Articles</a>
+        <a href="#proyectos">Projects</a>
+        <a href="#sobre-mi">About Me</a>
+        <select id="language-selector">
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+          <option value="es">Deutsch</option>
+          <option value="es">Italiano</option>
+          <option value="es">Türkçe</option>
+        </select>
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"kl\';
+        >
+          <svg id="moon-icon" viewBox="0 0 24 24" style="display: block">
+            <path
+              d="M21.6 15.6c-.6 0-1.1.2-1.5.6-.4.4-.6.9-.6 1.5 0 .6.2 1.1.6 1.5.4.4.9.6 1.5.6.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.5 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6zM12 21.6c-.6 0-1.1.2-1.5.6-.4.4-.6.9-.6 1.5 0 .6.2 1.1.6 1.5.4.4.9.6 1.5.6.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.5 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6zM2.4 15.6c-.6 0-1.1.2-1.5.6-.4.4-.6.9-.6 1.5 0 .6.2 1.1.6 1.5.4.4.9.6 1.5.6.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.5 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6zM12 2.4c-.6 0-1.1.2-1.5.6-.4.4-.6.9-.6 1.5 0 .6.2 1.1.6 1.5.4.4.9.6 1.5.6.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.5 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6zM12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm-1 21.9c-4.43-.58-8-4.32-8-8.9s3.57-8.32 8-8.9V21.9z"
+            />
+          </svg>
+          <svg id="sun-icon" viewBox="0 0 24 24" style="display: none">
+            <path
+              d="M12 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm8 11.66A9.998 9.998 0 0 1 12 22a9.98 9.98 0 0 1-5.66-2H4v-2.34l-1.66-1.66L2 15V9l1.66-1.66L4 5.66V4h2.34L8 2.34l1.66 1.66H15l1.66-1.66L18 4h2v2.34l1.66 1.66L22 9v6l-1.66 1.66L20 18v1.66z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <div class="scrollable-content">
+      <main class="blog-container">
+        <h1 id="main-title">Latest Articles</h1>
+        <div class="article-grid" id="article-list"></div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="social-links">
+        <a
+          href="URL_GITHUB"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.731.084-.67.084-.67 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.492.998.108-.77.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.085 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="URL_LINKEDIN"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.366-4-3.268-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="URL_YOUTUBE"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.498 6.186a3.36 3.36 0 0 0-2.372-2.372C18.885 3.2 12 3.2 12 3.2s-6.885 0-9.126.614A3.36 3.36 0 0 0 .502 6.186C-.142 8.427 0 12 0 12s.142 3.573.786 5.814a3.36 3.36 0 0 0 2.372 2.372c2.241.614 9.126.614 9.126.614s6.885 0 9.126-.614a3.36 3.36 0 0 0 2.372-2.372C24.142 15.573 24 12 24 12s.142-3.573-.502-5.814zM9.5 15.5v-7l5.5 3.5-5.5 3.5z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <p id="footer-text">
+        &copy; Rodrigo Javier. <span id="current-year"></span>
+      </p>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

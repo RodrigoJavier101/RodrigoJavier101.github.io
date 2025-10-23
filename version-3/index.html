@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Blogs de Rodrigo</title>
+    <style>
+      /* Estilos básicos para que los blogs se vean un poco mejor */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .blog-post {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .blog-post h2 {
+        color: #0056b3;
+        margin-top: 0;
+      }
+      .blog-post p {
+        line-height: 1.6;
+      }
+      .blog-post a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .blog-post a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mis Últimos Blogs</h1>
+    <div id="blogs-container">
+      <!-- Aquí se cargarán los blogs -->
+      <p>Cargando blogs...</p>
+    </div>
+    <!-- Firebase SDK - Asegúrate de que las versiones sean las últimas recomendadas -->
+    <!-- Puedes encontrar las versiones más recientes en la consola de Firebase,
+         cuando eliges "Añadir app a la web" en la configuración de tu proyecto. -->
+    <script type="module">
+      // Importa los módulos necesarios de Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+        query,
+        orderBy,
+      } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+      // 1. Configuración de tu proyecto Firebase
+      // Esto lo obtienes de tu consola de Firebase:
+      // En "Configuración del proyecto" (el icono de engranaje) > "Tus aplicaciones" > "Web"
+      const firebaseConfig = {
+        apiKey: "AIzaSyCOMYMkr3Tyn0I8a0qAurixhqm5Z4ynHhc",
+        authDomain: "rodrigo-portfolio-admin.firebaseapp.com",
+        projectId: "rodrigo-portfolio-admin",
+        storageBucket: "rodrigo-portfolio-admin.firebasestorage.app",
+        messagingSenderId: "823981414979",
+        appId: "1:823981414979:web:f4a49e30173c46149352f6",
+        measurementId: "G-P88R3L2TWR",
+      };
+      // 2. Inicializa Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      // 3. Función para obtener y mostrar los blogs
+      async function cargarBlogs() {
+        const blogsContainer = document.getElementById("blogs-container");
+        blogsContainer.innerHTML = "<p>Cargando blogs...</p>"; // Restablecer mensaje de carga
+        try {
+          // Crear una consulta para la colección 'blogs', ordenados por el campo 'date' descendente.
+          // ¡Importante! Para que el ordenamiento funcione cronológicamente con strings,
+          // el formato de la fecha en Firestore debe ser 'YYYY-MM-DD'.
+          const q = query(collection(db, "blogs"), orderBy("date", "desc"));
+          const querySnapshot = await getDocs(q);
+          if (querySnapshot.empty) {
+            blogsContainer.innerHTML = "<p>No hay blogs disponibles.</p>";
+            return;
+          }
+          // Limpiar el mensaje de carga si hay blogs
+          blogsContainer.innerHTML = "";
+          querySnapshot.forEach((doc) => {
+            const blog = doc.data(); // Obtiene los datos del documento
+            const blogElement = document.createElement("div");
+            blogElement.classList.add("blog-post"); // Para aplicar estilos si quieres
+            let legibleDate = "Fecha no disponible"; // Valor por defecto si no se puede procesar la fecha
+            // Procesar el campo 'date' (que es un string) del documento
+            if (blog.date && typeof blog.date === "string") {
+              try {
+                // Intentar parsear el string a un objeto Date de JavaScript
+                const dateObject = new Date(blog.date);
+                // Comprobar si la fecha parseada es válida
+                if (!isNaN(dateObject.getTime())) {
+                  legibleDate = dateObject.toLocaleDateString("es-ES", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  });
+                } else {
+                  console.warn(
+                    `Fecha inválida (string) para el blog ID ${doc.id}: ${blog.date}`
+                  );
+                }
+              } catch (error) {
+                console.error(
+                  `Error al procesar la fecha (string) para el blog ID ${doc.id}:`,
+                  error
+                );
+              }
+            } else if (blog.date && typeof blog.date.toDate === "function") {
+              // Fallback: Si el campo 'date' fuera un Timestamp de Firestore
+              legibleDate = blog.date.toDate().toLocaleDateString("es-ES", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+            }
+            // Construir el HTML para cada blog
+            blogElement.innerHTML = `
+                          <h2>${blog.title || "Título no disponible"}</h2>
+                          <p>
+                            <strong>Publicado el:</strong> ${legibleDate}
+                            ${
+                              blog.lang
+                                ? `(Idioma: ${blog.lang.toUpperCase()})`
+                                : ""
+                            }
+                          </p>
+                          <p>${
+                            blog.content ? blog.content.substring(0, 200) : ""
+                          }... <a href="#${
+              blog.slug || doc.id
+            }">Leer más</a></p>
+                          ${
+                            blog.youtubeUrl
+                              ? `<p>Ver video: <a href="${blog.youtubeUrl}" target="_blank">YouTube</a></p>`
+                              : ""
+                          }
+                          <hr>
+                      `;
+            blogsContainer.appendChild(blogElement);
+          });
+        } catch (error) {
+          console.error("Error al cargar los blogs:", error);
+          blogsContainer.innerHTML =
+            "<p>Hubo un error al cargar los blogs. Por favor, inténtalo de nuevo más tarde.</p>";
+        }
+      }
+      // 4. Cargar los blogs cuando la página esté lista
+      document.addEventListener("DOMContentLoaded", cargarBlogs);
+    </script>
+  </body>
+</html>

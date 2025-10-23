@@ -1,0 +1,44 @@
+/* 💥 Ajusta tu H1 para que los elementos se alineen */
+.h1-icon {
+  /* 💥 REDUCCIÓN DE TAMAÑO: Baja a 1.2rem o menos si es necesario */
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+
+  margin-right: 0.75rem;
+  fill: currentColor;
+}
+
+/* 💥 RESPALDO (Asegura el tamaño si se hereda algo) */
+.blog-container h1 > svg {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+}
+
+/* --- Estilos del Contenedor H1 (Alineación) --- */
+.blog-container h1 {
+  /* Convierte el H1 en contenedor flexible */
+  display: flex;
+  /* Centra el icono y el texto horizontalmente */
+  justify-content: center;
+  /* Alinea el icono y el texto verticalmente (en el centro) */
+  align-items: center;
+
+  /* 💥 IMPORTANTE: Asegúrate que el tamaño de la fuente del h1 sea grande */
+  font-size: 2.5rem; /* Ajusta este valor al tamaño que deseas para el texto */
+}
+
+.blog-container h1::before {
+  content: ""; /* Obligatorio para pseudo-elementos */
+  position: absolute;
+  left: calc(
+    50% - (var(--h1-icon-size) / 2) - 1.5rem
+  ); /* Ajusta esta posición */
+  background-image: url("./icon.svg");
+  /* NOTA: 'left' podría necesitar ajuste si el h1 no ocupa el ancho completo o si hay mucho padding */
+  /* Una forma más robusta es colocarlo a la izquierda del padding */
+  /* left: 0; */
+  /* transform: translateX(1rem); */ /* O usar esta para empujar desde el padding */
+
+  width: var(--h1-icon-size); /* Usar variable CSS para el tamaño */
+  height: var(--h1-icon-size); /* Usar variable CSS para el tamaño */
+}

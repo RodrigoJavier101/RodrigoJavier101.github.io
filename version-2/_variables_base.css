@@ -1,0 +1,47 @@
+/* _variables_base.css - CAMBIAR SECCIÓN DE .light-mode */
+
+/* Variables para Modo Oscuro (por defecto) */
+:root {
+  --color-primary: #0096c7;
+  --color-background: #0d121c;
+  --color-card: #16213e;
+  --color-text-main: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --header-height: 3.5rem;
+  --footer-height: 3rem;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Glassmorphism Variables */
+  --glass-bg-opacity: 0.75;
+  --glass-base-rgb: 13, 18, 28; /* Base oscura (para modo oscuro) */
+
+  --h1-icon-size: 2.2rem;
+}
+
+:root,
+.dark-mode {
+  --color-bg-main: #1c1c1c; /* Color principal oscuro */
+  --color-bg-gradient-dark: #121212; /* Color muy oscuro para el gradiente */
+  --color-bg-gradient-light: #2c2c2c; /* Color menos oscuro para el gradiente */
+}
+
+/* Variables para Modo Claro */
+.light-mode {
+  --color-bg-main: #f0f0f0; /* Color principal muy claro (casi blanco) */
+
+  /* 💥 CAMBIO CRUCIAL AQUÍ: Hacemos que el color oscuro del gradiente sea CLARO */
+  --color-bg-gradient-dark: #e8e8e8; /* Antes era oscuro, ahora es un gris muy claro */
+
+  --color-bg-gradient-light: #ffffff;
+
+  --color-primary: #1976d2;
+  --color-background: #f0f4f8;
+  --color-card: #ffffff;
+  --color-text-main: #263238;
+  --color-text-secondary: #546e7a;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+
+  /* Glassmorphism Variables */
+  --glass-bg-opacity: 0.95; /* 💥 Opacidad aumentada para máxima solidez y contraste */
+  --glass-base-rgb: 255, 255, 255; /* 💥 Base BLANCA (para modo claro) */
+}
