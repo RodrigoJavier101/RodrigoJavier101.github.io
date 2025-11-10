@@ -15,7 +15,7 @@ export const projects = {
       title: "Code Chunks",
       description: "YouTube channel with coding tutorials in Spanish.",
       tech: ["YouTube", "Video Editing", "JavaScript"],
-      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      liveUrl: "https://www.youtube.com/@DocendoDisciturEN",
       githubUrl: null,
       image: "assets/images/codechunks-preview.png",
     },
@@ -37,7 +37,7 @@ export const projects = {
       description:
         "Canal de YouTube con tutoriales de programación en español.",
       tech: ["YouTube", "Edición de video", "JavaScript"],
-      liveUrl: "https://www.youtube.com/@CodeChunksEs",
+      liveUrl: "https://www.youtube.com/@DocendoDisciturES",
       githubUrl: null,
       image: "assets/images/codechunks-preview.png",
     },
