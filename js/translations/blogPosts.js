@@ -1,40 +1,45 @@
 export const blogPosts = {
   en: [
     {
-      id: "js-tips",
-      title: "5 JavaScript Tips Every Developer Should Know",
-      date: "2025-04-10",
+      id: "1",
+      title: "Intro to YT Channels",
+      date: "2025-11-09",
       excerpt:
         "Learn how to write cleaner, faster, and more maintainable JavaScript code.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 añade esta línea
       content: `
-        <p>JavaScript is powerful, but it's easy to fall into bad patterns.</p>
-        <p>Here's a pro tip: always use <code>const</code> by default.</p>
-        <pre><code>const user = { name: 'Rodrigo' };</code></pre>
-      `,
-    },
-    {
-      id: "dark-mode",
-      title: "How I Built a Dark Mode Toggle",
-      date: "2025-03-22",
-      excerpt: "A deep dive into CSS variables and localStorage.",
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 ejemplo
-      content: `
-        <p>Dark mode isn't just trendy—it reduces eye strain.</p>
-        <p>I used <code>prefers-color-scheme</code> and <code>localStorage</code> to make it persistent.</p>
+       <p>Docendo Discitur, del latín enseñando, se aprende. 
+Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar personalmente en el conocimiento mediante la técnica de intentar enseñar.
+</p>
+       <p>La expresión la tomé de la frase de Séneca de sus Cartas Morales a Lucilius, Carta 7, sección 8, la que voy a citar expresamente: “…no debes imitar lo malo solo porque sea abundante, ni odiar a la mayoría porque sea diferente a ti. Retírate a tu interior, tanto como puedas. Rodéate de quienes te ayuden a ser mejor persona. Acoge a quienes puedas mejorar. El proceso es mutuo; pues se aprende enseñando”, y en latín Processus est mutuus; discimus docendo.</p>
+       <p>El científico Richard Feynman tuvo el principio de enseñar a los principiantes sobre temas avanzados haciendo conferencias y dando clases a los primerizos. Así que, humildemente, imaginaré que hago el papel de profesor para mí mismo.</p>
+       <p>Las temáticas que intentaré abordar son especialmente las relacionadas con informática y, yendo un poco más allá, me gustaría desviarme un de la informática y avanzar un poco en temas científicos en general tal como matemáticas y otros semejantes. Me gustaría ser lo más específico y lo más acotado posible en relación a los temas que estaría abordando sin el objetivo final de abarcar todo de todo.</p>
+       <p>Así que espero, de ahora en adelante, imprimir mi óptica de las cosas y aprender, pero debatiendo conmigo mismo intentando operar en mi propia mente.</p>
+       <p>Salut!</p>
       `,
     },
   ],
   es: [
     {
-      id: "dark-mode",
-      title: "Cómo Creé un Interruptor de Modo Oscuro",
-      date: "2025-03-22",
+      id: "1",
+      title: "Intro a canales de YT",
+      date: "2025-11-09",
       excerpt: "Un vistazo profundo a las variables CSS y localStorage.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
-        <p>El modo oscuro no es solo tendencia: reduce la fatiga visual.</p>
-        <p>Usé <code>prefers-color-scheme</code> y <code>localStorage</code> para hacerlo persistente.</p>
+        <p>Docendo Discitur, del latín enseñando, se aprende. 
+Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar personalmente en el conocimiento mediante la técnica de intentar enseñar.
+</p>
+
+<p>La expresión la tomé de la frase de Séneca de sus Cartas Morales a Lucilius, Carta 7, sección 8, la que voy a citar expresamente: “…no debes imitar lo malo solo porque sea abundante, ni odiar a la mayoría porque sea diferente a ti. Retírate a tu interior, tanto como puedas. Rodéate de quienes te ayuden a ser mejor persona. Acoge a quienes puedas mejorar. El proceso es mutuo; pues se aprende enseñando”, y en latín Processus est mutuus; discimus docendo.</p>
+
+<p>El científico Richard Feynman tuvo el principio de enseñar a los principiantes sobre temas avanzados haciendo conferencias y dando clases a los primerizos. Así que, humildemente, imaginaré que hago el papel de profesor para mí mismo.</p>
+
+<p>Las temáticas que intentaré abordar son especialmente las relacionadas con informática y, yendo un poco más allá, me gustaría desviarme un de la informática y avanzar un poco en temas científicos en general tal como matemáticas y otros semejantes. Me gustaría ser lo más específico y lo más acotado posible en relación a los temas que estaría abordando sin el objetivo final de abarcar todo de todo.</p>
+
+<p>Así que espero, de ahora en adelante, imprimir mi óptica de las cosas y aprender, pero debatiendo conmigo mismo intentando operar en mi propia mente.</p>
+
+<p>Salut!</p>
       `,
     },
   ],
