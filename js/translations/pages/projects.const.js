@@ -8,7 +8,7 @@ export const projects = {
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
-      image: "assets/images/docendo-preview.png",
+      image: "./assets/images/docendo-preview.png",
     },
   ],
   es: [
@@ -20,7 +20,7 @@ export const projects = {
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
-      image: "assets/images/docendo-preview.png",
+      image: "./assets/images/docendo-preview.png",
     },
   ],
 };
