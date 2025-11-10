@@ -5,7 +5,7 @@ export const blogPosts = {
       title: "Intro to YT Channels",
       date: "2025-11-09",
       excerpt:
-        "Learn how to write cleaner, faster, and more maintainable JavaScript code.",
+        "An introduction to the YouTube channel.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 añade esta línea
       content: `
        <p>Docendo Discitur, del latín enseñando, se aprende. 
@@ -24,7 +24,7 @@ Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar person
       id: "1",
       title: "Intro a canales de YT",
       date: "2025-11-09",
-      excerpt: "Un vistazo profundo a las variables CSS y localStorage.",
+      excerpt: "Una introducción al canal de YouTube.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
         <p>Docendo Discitur, del latín enseñando, se aprende. 

@@ -3,8 +3,8 @@ export const projects = {
     {
       id: "docendo",
       title: "Docendo Discitur",
-      description: "A multilingual educational platform for developers.",
-      tech: ["JavaScript", "Firebase", "CSS"],
+      description: "An educational platform.",
+      tech: ["Starting", "Computer Science", "Science"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
@@ -15,8 +15,8 @@ export const projects = {
     {
       id: "docendo",
       title: "Docendo Discitur",
-      description: "Plataforma educativa multilingüe para desarrolladores.",
-      tech: ["JavaScript", "Firebase", "CSS"],
+      description: "Plataforma educativa.",
+      tech: ["Empezando", "Informática", "Ciencia"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
