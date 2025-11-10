@@ -3,7 +3,7 @@ export const blogPosts = {
     {
       id: "1",
       title: "Intro to YT Channels",
-      date: "2025-11-09",
+      date: "Sunday, November 9, 2025",
       excerpt: "An introduction to the YouTube channel.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", // 👈 añade esta línea
       content: `
@@ -22,7 +22,7 @@ Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar person
     {
       id: "1",
       title: "Intro a canales de YT",
-      date: "2025-11-09",
+      date: "Domingo, 9 de Noviembre de 2025",
       excerpt: "Una introducción al canal de YouTube.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
