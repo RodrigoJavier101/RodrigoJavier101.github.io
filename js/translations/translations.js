@@ -18,11 +18,11 @@ export const translations = {
     nav_contact: "Contact",
     nav_docendo: "DocendoDiscitur",
 
-    download_cv: "Download CV",
-    download_eng_cert: "Download Eng Cert",
-    download_facil_cert: "Download Facil Cert",
+    download_cv: "Resume",
+    download_eng_cert: "Eng Cert",
+    download_facil_cert: "Facil Cert",
 
-    download_boot_cert: "Download Boot Cert",
+    download_boot_cert: "Boot Cert",
   },
   es: {
     home_title: "Hola, soy Rodrigo",
@@ -44,9 +44,9 @@ export const translations = {
     nav_contact: "Contacto",
     nav_docendo: "DocendoDiscitur",
 
-    download_cv: "Descargar CV",
-    download_eng_cert: "Descargar Cert de Inglés",
-    download_facil_cert: "Descargar Cert de Facilitador",
-    download_boot_cert: "Descargar Cert de Bootcamp",
+    download_cv: "Curriculum",
+    download_eng_cert: "Cert de Inglés",
+    download_facil_cert: "Cert de Facilitador",
+    download_boot_cert: "Cert de Bootcamp",
   },
 };
