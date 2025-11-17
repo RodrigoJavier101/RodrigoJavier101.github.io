@@ -21,6 +21,8 @@ export const translations = {
     download_cv: "Download CV",
     download_eng_cert: "Download Eng Cert",
     download_facil_cert: "Download Facil Cert",
+
+    download_boot_cert: "Download Boot Cert",
   },
   es: {
     home_title: "Hola, soy Rodrigo",
@@ -45,5 +47,6 @@ export const translations = {
     download_cv: "Descargar CV",
     download_eng_cert: "Descargar Cert de Inglés",
     download_facil_cert: "Descargar Cert de Facilitador",
+    download_boot_cert: "Descargar Cert de Bootcamp",
   },
 };

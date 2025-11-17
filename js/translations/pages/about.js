@@ -16,5 +16,9 @@ export const about = (lang) => `
        class="cv-link" target="_blank" rel="noopener noreferrer">
       ${translations[lang].download_facil_cert}
     </a>
+    <a href="https://credly.com/badges/cc6bc067-4834-468d-9fc2-27c4ea2955ed?source=linked_in_profile" 
+       class="cv-link" target="_blank" rel="noopener noreferrer">
+      ${translations[lang].download_boot_cert}
+    </a>
   </div>
 `;
