@@ -1,0 +1,41 @@
+.footer {
+  padding: 1.2rem 0;
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: auto;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  display: block;
+}
+
+#footer-text {
+  margin: 0;
+}

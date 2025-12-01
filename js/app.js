@@ -194,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectModal.classList.remove("is-active");
     });
   }
+  
   if (projectModal) {
     projectModal.addEventListener("click", (e) => {
       if (e.target === projectModal) {

@@ -1,0 +1,46 @@
+.content {
+  flex: 1;
+  padding: 2rem 0;
+  overflow-y: auto;
+}
+
+.page {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+pre {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+code {
+  font-size: 0.95em;
+}
+
+pre code {
+  display: block;
+  padding: 0.5em;
+  background: var(--code-bg);
+  border-radius: 4px;
+}

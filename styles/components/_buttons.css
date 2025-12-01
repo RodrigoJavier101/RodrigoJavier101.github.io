@@ -1,0 +1,50 @@
+.cv-link,
+.youtube-link,
+.youtube-link-small,
+.youtube-btn,
+.youtube-btn-small {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+.cv-link {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.cv-link:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.youtube-link,
+.youtube-btn {
+  margin: 1rem 0 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff0000;
+  color: white;
+}
+
+.youtube-link-small,
+.youtube-btn-small {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #ff0000;
+  color: white;
+  font-size: 0.85rem;
+  border-radius: 3px;
+}
+
+.youtube-link:hover,
+.youtube-link-small:hover,
+.youtube-btn:hover,
+.youtube-btn-small:hover {
+  background-color: #cc0000;
+  text-decoration: underline;
+}
