@@ -161,7 +161,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const youtubeClose = document.querySelector(".close-button");
   const embedContainer = document.getElementById("youtube-embed-container");
 
-  // Delegación: botones de YouTube
+  function openYouTubeModal(videoId) {
+    if (!videoId) return;
+    embedContainer.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  `;
+    youtubeModal.classList.add("is-active");
+  }
+
+  function closeYouTubeModal() {
+    // 👇 Clave: vaciar el iframe para detener el video
+    embedContainer.innerHTML = "";
+    youtubeModal.classList.remove("is-active");
+  }
+
+  // Abrir desde botones
   document.addEventListener("click", (e) => {
     if (
       e.target.classList.contains("youtube-btn") ||
@@ -170,27 +189,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const fullUrl = e.target.getAttribute("data-youtube-url");
       const videoId = extractVideoId(fullUrl);
       if (videoId) {
-        embedContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-        youtubeModal.classList.add("is-active");
+        openYouTubeModal(videoId);
       } else {
         console.error("URL de YouTube inválida:", fullUrl);
       }
     }
   });
 
-  // Cerrar modal de YouTube
+  // Cerrar con botón ×
   if (youtubeClose) {
-    youtubeClose.addEventListener("click", () => {
-      embedContainer.innerHTML = "";
-      youtubeModal.classList.remove("is-active");
+    youtubeClose.addEventListener("click", closeYouTubeModal);
+  }
+
+  // Cerrar al hacer clic en el overlay (fondo oscuro)
+  if (youtubeModal) {
+    youtubeModal.addEventListener("click", (e) => {
+      if (e.target === youtubeModal) {
+        closeYouTubeModal();
+      }
     });
   }
-  window.addEventListener("click", (e) => {
-    if (e.target === youtubeModal) {
-      embedContainer.innerHTML = "";
-      youtubeModal.classList.remove("is-active");
-    }
-  });
 
   // === Modal de Proyectos ===
   const projectModal = document.getElementById("project-modal");

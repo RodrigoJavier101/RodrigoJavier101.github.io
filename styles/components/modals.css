@@ -43,23 +43,35 @@
   transform: translateY(0);
 }
 
-/* Contenido del modal de YouTube */
-#youtube-embed-container,
-.modal-content {
-  position: relative;
+/* === Modal de YouTube: ahora con estilo igual al de proyecto === */
+#youtube-modal .modal-content {
+  /* Copiamos los estilos de .modal-content-project */
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   width: 90%;
   max-width: 800px;
-  padding-bottom: 56.25%;
-  height: 0;
-  border-radius: 12px;
-  overflow: hidden;
+  max-height: 90vh;
+  overflow: hidden; /* solo para el contenedor externo */
+  padding: 0; /* el iframe ocupa todo, pero el contenedor tiene estilo */
+  position: relative;
   transform: translateY(10px);
   transition: transform 0.3s ease;
 }
 
-#youtube-modal.is-active #youtube-embed-container,
-.modal.is-active .modal-content {
+/* El contenedor del iframe debe estar DENTRO del styled container */
+#youtube-modal.is-active .modal-content {
   transform: translateY(0);
+}
+
+/* El iframe ahora se anida dentro de un padding visual */
+#youtube-embed-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  border-radius: 8px; /* opcional, para suavizar bordes internos */
+  overflow: hidden;
 }
 
 #youtube-embed-container iframe {
