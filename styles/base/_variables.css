@@ -1,6 +1,10 @@
-/* ========================================
-   BASE: Variables de color (Gruvbox pastel)
-   ======================================== */
+/* Fuente principal: Inter (desde Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Fuente monoespaciada: JetBrains Mono (ideal para código) */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+
 :root {
   /* Tema oscuro (por defecto) */
   --bg: #282828;
@@ -13,6 +17,10 @@
   --code-bg: #3c3836;
   --color-primary: var(--accent);
   --color-text-secondary: var(--text-secondary);
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, Monaco, "Courier New", monospace;
 }
 
 [data-theme="light"] {

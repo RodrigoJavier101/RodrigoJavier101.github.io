@@ -112,6 +112,50 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("theme-toggle")
     .addEventListener("click", toggleTheme);
 
+  // === Menú hamburguesa (drawer) ===
+  const hamburger = document.querySelector(".hamburger");
+  const drawer = document.querySelector(".menu-drawer");
+  const closeDrawer = document.querySelector(".close-drawer");
+
+  if (hamburger && drawer && closeDrawer) {
+    function toggleDrawer() {
+      const isVisible = drawer.getAttribute("data-visible") === "true";
+      drawer.setAttribute("data-visible", String(!isVisible));
+      hamburger.setAttribute("aria-expanded", String(!isVisible));
+    }
+
+    hamburger.addEventListener("click", toggleDrawer);
+    closeDrawer.addEventListener("click", toggleDrawer);
+    drawer.addEventListener("click", (e) => {
+      if (e.target === drawer) toggleDrawer();
+    });
+
+    // Cerrar al hacer clic en un enlace del drawer
+    const drawerLinks = drawer.querySelectorAll("a[data-page]");
+    drawerLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        // Actualizar hash manualmente (opcional, si no usas router)
+        // window.location.hash = e.currentTarget.getAttribute('href').slice(1);
+        toggleDrawer();
+      });
+    });
+
+    // Sincronizar controles del drawer con los del header (opcional)
+    const langSwitchDrawer = document.getElementById("lang-switch-drawer");
+    const themeToggleDrawer = document.getElementById("theme-toggle-drawer");
+
+    if (langSwitchDrawer) {
+      langSwitchDrawer.value = currentLang;
+      langSwitchDrawer.addEventListener("change", (e) => {
+        setLanguage(e.target.value);
+      });
+    }
+
+    if (themeToggleDrawer) {
+      themeToggleDrawer.addEventListener("click", toggleTheme);
+    }
+  }
+
   // === Modal de YouTube ===
   const youtubeModal = document.getElementById("youtube-modal");
   const youtubeClose = document.querySelector(".close-button");
@@ -194,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectModal.classList.remove("is-active");
     });
   }
-  
+
   if (projectModal) {
     projectModal.addEventListener("click", (e) => {
       if (e.target === projectModal) {

@@ -9,12 +9,13 @@
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.8rem;
+  /* NOTA: sin justify-content */
 }
 
+/* Logo y hamburguesa quedan al inicio natural del flex */
 .logo {
   width: 60px;
   height: 60px;
@@ -29,6 +30,7 @@
   display: block;
 }
 
+/* Menú horizontal (solo escritorio) */
 nav {
   display: flex;
   gap: 1.5rem;
@@ -54,6 +56,7 @@ nav a.active {
   text-underline-offset: 4px;
 }
 
+/* Controles (idioma + tema) */
 .controls {
   display: flex;
   gap: 0.8rem;
@@ -69,4 +72,128 @@ nav a.active {
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* === Hamburguesa y menú desplegable === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Panel desplegable */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1500;
+}
+
+.menu-drawer[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-drawer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(340px, 33.3vw);
+  height: 100%;
+  background-color: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.close-drawer {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.close-drawer:hover {
+  color: var(--accent);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.drawer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  transition: color 0.2s;
+}
+
+.drawer-nav a:hover,
+.drawer-nav a.active {
+  color: var(--accent);
+}
+
+.drawer-controls {
+  margin-top: auto;
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.drawer-controls select,
+.drawer-controls button {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* === Responsive: móviles === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  /* Empuja los controles a la derecha solo en móvil */
+  .controls {
+    margin-left: auto;
+  }
 }
