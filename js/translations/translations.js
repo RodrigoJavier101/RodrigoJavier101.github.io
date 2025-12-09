@@ -8,7 +8,9 @@ export const translations = {
     about_text: "I build apps and share knowledge. ",
 
     blog_title: "Latest Articles",
+
     projects_title: "Featured Projects",
+
     contact_title: "Get in Touch",
 
     nav_home: "Home",
@@ -35,6 +37,7 @@ export const translations = {
     blog_title: "Últimos Artículos",
 
     projects_title: "Proyectos Destacados",
+
     contact_title: "Contáctame",
 
     nav_home: "Inicio",
