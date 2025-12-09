@@ -1,4 +1,4 @@
-import { translations } from "../translations.js";
+import { translations } from "../translations/translations.js";
 
 export const home = (lang) => `
   <div class="page container">

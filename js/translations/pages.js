@@ -1,10 +1,10 @@
 // translations/pages.js
-import { home } from "./pages/home.js";
-import { about } from "./pages/about.js";
-import { projectsPage } from "./pages/projects.js";
-import { blog } from "./pages/blog.js";
-import { blogPost } from "./pages/blogPost.js";
-import { contact } from "./pages/contact.js";
+import { home } from "../home/home.js";
+import { about } from "../about/about.js";
+import { projectsPage } from "../projects/projects.js";
+import { blog } from "../blog/blog.js";
+import { blogPost } from "../blog/blogPost.js";
+import { contact } from "../contact/contact.js";
 
 export const pages = {
   home,

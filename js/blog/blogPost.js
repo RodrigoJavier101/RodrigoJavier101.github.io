@@ -1,4 +1,4 @@
-import { blogPosts } from "../blogPosts.js";
+import { blogPosts } from "../blog/blogPosts.js";
 
 export const blogPost =  (lang, postId) => {
   const posts = blogPosts[lang] || blogPosts.en;

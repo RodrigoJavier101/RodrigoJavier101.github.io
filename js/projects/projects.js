@@ -1,5 +1,5 @@
-import { translations } from "../translations.js";
-import { projects } from "../projects.const.js";
+import { translations } from "../translations/translations.js";
+import { projects } from "./projects.const.js";
 
 export const projectsPage = (lang) => {
   const projList = (projects[lang] || projects.en)

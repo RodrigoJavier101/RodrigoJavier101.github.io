@@ -5,7 +5,7 @@ import { updateCurrentDate } from "./ui/date.js";
 import { initHamburgerMenu } from "./components/hamburgerMenu.js";
 import { initYouTubeModal } from "./components/youtubeModal.js";
 import { initProjectModal } from "./components/projectModal.js";
-import { renderPage } from "./pages/renderer.js";
+import { renderPage } from "./renderer/renderer.js";
 
 // --- Inicialización ---
 document.addEventListener("DOMContentLoaded", () => {

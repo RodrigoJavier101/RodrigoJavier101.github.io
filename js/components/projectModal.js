@@ -1,4 +1,4 @@
-import { projects } from "../translations/pages/projects.const.js";
+import { projects } from "../projects/projects.const.js";
 import { getLang } from "../core/state.js";
 
 export function initProjectModal() {
