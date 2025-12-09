@@ -1,5 +1,5 @@
 import { translations } from "../translations.js";
-import { blogPosts } from "../blogPosts.js";
+import { blogPosts } from "./blogPosts.js";
 // import { getBlogs } from "./firebase.js";
 
 // mejor a mano, luego lo veo para poder suir blogs de acuerdo a lo que vay creciendo
