@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: var(--zindex-ytmodal);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -93,7 +93,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  z-index: 10; /* asegura que esté por encima del iframe */
+  z-index: var(--zindex-closebutton); /* asegura que esté por encima del iframe */
 }
 
 .close-button:hover,

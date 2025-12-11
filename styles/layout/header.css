@@ -4,7 +4,7 @@
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
   padding: 1rem 0;
-  z-index: 100;
+  z-index: var(--zindex-navbar);
 }
 
 .navbar .container {
@@ -85,7 +85,7 @@ nav a.active {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 101;
+  z-index: var(--zindex-hambutton);w
 }
 
 .hamburger span {
@@ -108,7 +108,7 @@ nav a.active {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1500;
+  z-index: var(--zindex-menudrawer);
 }
 
 .menu-drawer[data-visible="true"] {
