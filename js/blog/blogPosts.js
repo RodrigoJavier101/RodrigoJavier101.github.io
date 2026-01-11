@@ -1,11 +1,14 @@
+import { videoLinksEn } from "./video-links/en.js";
+import { videoLinksEs } from "./video-links/es.js";
+
 export const blogPosts = {
   en: [
     {
-      id: "1",
-      title: "Intro to YT Channels",
-      date: "Sunday, November 9, 2025",
+      id: videoLinksEn[0].id,
+      title: videoLinksEn[0].title,
+      youtubeUrl: videoLinksEn[0].url,
+      date: videoLinksEn[0].date,
       excerpt: "An introduction to the YouTube channel.",
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw", 
       content: `
       <p>Docendo Discitur, from the Latin "by teaching, one learns." </p>
       <p>I make this effort to create explanatory videos with the goal of personally improving my knowledge through the technique of trying to teach. </p>
@@ -19,11 +22,11 @@ export const blogPosts = {
   ],
   es: [
     {
-      id: "1",
-      title: "Intro a canales de YT",
-      date: "Domingo, 9 de Noviembre de 2025",
+      id: videoLinksEs[0].id,
+      title: videoLinksEs[0].title,
+      youtubeUrl: videoLinksEs[0].url,
+      date: videoLinksEs[0].date,
       excerpt: "Una introducción al canal de YouTube.",
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
         <p>Docendo Discitur, del latín "enseñando, se aprende". </p>
           <p>Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar personalmente en el conocimiento mediante la técnica de intentar enseñar.  </p>
