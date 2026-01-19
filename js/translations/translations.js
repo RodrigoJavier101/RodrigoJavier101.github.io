@@ -11,7 +11,7 @@ export const translations = {
 
     projects_title: "Featured Projects",
 
-    contact_title: "Get in Touch",
+    contact_title: "Get in Touch, if you want.",
 
     nav_home: "Home",
     nav_about: "About",
@@ -38,7 +38,7 @@ export const translations = {
 
     projects_title: "Proyectos Destacados",
 
-    contact_title: "Contáctame",
+    contact_title: "Contáctame, si quieres.",
 
     nav_home: "Inicio",
     nav_about: "Sobre mí",
