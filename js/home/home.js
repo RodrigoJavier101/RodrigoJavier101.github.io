@@ -6,7 +6,6 @@ export const home = (lang) => `
     <p>${translations[lang].home_desc}</p>
     <p>${translations[lang].home_body || ""}</p>
   </div>
-  
   <div class="page container">
     <h2>${translations[lang].contact_title}</h2>
     <p>rodrigojaviergd@gmail.com</p>
