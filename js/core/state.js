@@ -3,6 +3,7 @@ let currentTheme = localStorage.getItem("theme") || "dark";
 
 export function getLang() { return currentLang; }
 export function setLang(lang) {
+  console.log(lang, ',incomodo')
   currentLang = lang;
   localStorage.setItem("lang", lang);
 }

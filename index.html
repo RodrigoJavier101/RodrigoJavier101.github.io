@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rodrigo Javier | Portfolio & Blog</title>
     <link href="./assets/images/logo.png" rel="icon" type="image/png" />
-  
+
     <!-- Estilos base -->
     <link rel="stylesheet" href="./styles/base/variables.css" />
     <link rel="stylesheet" href="./styles/base/reset.css" />
@@ -39,17 +39,13 @@
         </a>
 
         <!-- Menú principal (oculto en móvil) -->
-        <nav>
-          <a href="#home" data-page="home">Home</a>
-          <a href="#about" data-page="about">About</a>
-          <a href="#projects" data-page="projects">Projects</a>
-          <a href="#blog" data-page="blog">Blog</a>
-          <!-- <a href="#contact" data-page="contact">Contact</a> -->
+        <nav id="main-nav">
+          <!-- Los enlaces se generarán dinámicamente -->
         </nav>
 
         <div class="controls">
           <select id="lang-switch">
-            <option value="en" selected>EN</option>
+            <option value="en">EN</option>
             <option value="es">ES</option>
           </select>
           <button id="theme-toggle" aria-label="Toggle theme">🌙 / ☀️</button>
