@@ -1,7 +1,7 @@
 import { pages } from "../translations/pages.js";
-
 import { getLang } from "../core/state.js";
 import { styleCodeBlocks } from "../ui/codeBlocks.js";
+import { renderNav } from "../ui/nav.js"; // 👈 nueva importación
 
 export function renderPage() {
   const hash = window.location.hash.slice(1) || "home";
@@ -19,6 +19,9 @@ export function renderPage() {
     window.location.hash = "home";
     contentElement.innerHTML = pages.home(getLang());
   }
+
+  // ✅ Renderizar menú en el idioma actual
+  renderNav();
 
   // Actualizar enlace activo
   document.querySelectorAll("nav a").forEach((link) => {
