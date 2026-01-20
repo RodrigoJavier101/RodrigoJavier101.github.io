@@ -5,7 +5,7 @@ export const translations = {
     home_body: `Just pay attention to the blog section and the projects that I'm working on.`,
 
     about_title: "About Me",
-    about_text: "I build apps and share knowledge. ",
+    about_text: "These are my CV and certifications. ",
 
     blog_title: "Latest Articles",
 
@@ -32,7 +32,7 @@ export const translations = {
     home_body: `Solo presta atención a la sección de blog y a los proyectos en los que he trabajado.`,
 
     about_title: "Sobre Mí",
-    about_text: "Desarrollo apps y comparto conocimiento.",
+    about_text: "Estos son mi CV y mis ​​certificaciones.",
 
     blog_title: "Últimos Artículos",
 

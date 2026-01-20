@@ -4,7 +4,6 @@ import { about } from "../about/about.js";
 import { projectsPage } from "../projects/projects.js";
 import { blog } from "../blog/blog.js";
 import { blogPost } from "../blog/blogPost.js";
-// import { contact } from "../contact/contact.js";
 
 export const pages = {
   home,
@@ -12,5 +11,4 @@ export const pages = {
   projects: projectsPage,
   blog,
   blogPost,
-  // contact,
 };
