@@ -7,7 +7,6 @@ const navItems = [
   { id: "about", hash: "#about" },
   { id: "projects", hash: "#projects" },
   { id: "blog", hash: "#blog" },
-  { id: "contact", hash: "#contact" },
 ];
 
 export function renderNav() {

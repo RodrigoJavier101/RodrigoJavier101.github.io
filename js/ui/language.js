@@ -1,21 +1,29 @@
+// ui/language.js
 import { translations } from "../translations/translations.js";
 import { youtubeUrls } from "../translations/constants.js";
 import { getLang, setLang } from "../core/state.js";
 
+// ✅ Función privada para sincronizar todos los selects
+function syncLanguageSelectors(lang) {
+  document.querySelectorAll("#lang-switch, #lang-switch-drawer").forEach((select) => {
+    if (select) select.value = lang;
+  });
+}
+
 export function setLanguage(lang) {
   setLang(lang);
+  const t = translations[lang] || translations.en;
 
-  // Actualizar menú
+  // Actualizar menú (aunque ahora usas renderNav, esto puede quedar obsoleto)
   document.querySelectorAll("[data-page]").forEach((el) => {
     const key = `nav_${el.dataset.page}`;
-    el.textContent = translations[lang][key] || el.dataset.page;
+    el.textContent = t[key] || el.dataset.page;
   });
 
-  // Actualizar enlace de YouTube
+  // Actualizar YouTube
   const ytLink = document.getElementById("youtube-link");
   if (ytLink) ytLink.href = youtubeUrls[lang] || youtubeUrls.en;
 
-  // Actualizar selects del drawer si existen
-  const drawerSwitch = document.getElementById("lang-switch-drawer");
-  if (drawerSwitch) drawerSwitch.value = lang;
+  // ✅ Sincronizar ambos selects
+  syncLanguageSelectors(lang);
 }
