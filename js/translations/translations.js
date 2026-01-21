@@ -14,7 +14,7 @@ export const translations = {
     contact_title: "Get in Touch, if you want.",
 
     nav_home: "Home",
-    nav_about: "About",
+    nav_about: "About Me",
     nav_projects: "Projects",
     nav_blog: "Blog",
     nav_contact: "Contact",
