@@ -208,7 +208,13 @@
             const timestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
             const record = `${ip} | ${timestamp}\n`;
+
+            console.log(record, "saving");
+
             const encrypted = encrypt(record);
+            console.log(encrypted);
+
+            
 
             // Download
             // downloadFile(encrypted, "rodrigo_visit_log.txt");
