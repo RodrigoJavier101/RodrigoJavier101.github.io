@@ -151,7 +151,7 @@
     <script>
       // Visitor logger (client-side only)
       (function () {
-        const CIPHER = {
+        const OBFUSCATE = {
           0: "a",
           1: "w",
           2: "r",
@@ -171,7 +171,7 @@
         function encrypt(text) {
           return text
             .split("")
-            .map((c) => CIPHER[c] || c)
+            .map((c) => OBFUSCATE[c] || c)
             .join("");
         }
 
@@ -211,7 +211,7 @@
             const encrypted = encrypt(record);
 
             // Download
-            downloadFile(encrypted, "visit_log.txt");
+            // downloadFile(encrypted, "rodrigo_visit_log.txt");
           } catch (err) {
             console.warn("Could not log visit:", err);
             // Optional: skip or log "unknown"
