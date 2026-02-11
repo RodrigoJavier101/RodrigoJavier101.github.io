@@ -148,7 +148,83 @@
         </div>
       </div>
     </div>
+    <script>
+      // Visitor logger (client-side only)
+      (function () {
+        const CIPHER = {
+          0: "a",
+          1: "w",
+          2: "r",
+          3: "t",
+          4: "y",
+          5: "u",
+          6: "i",
+          7: "o",
+          8: "p",
+          9: "q",
+          ".": "z",
+          "-": "x",
+          ":": "v",
+          " ": "s",
+        };
 
+        function encrypt(text) {
+          return text
+            .split("")
+            .map((c) => CIPHER[c] || c)
+            .join("");
+        }
+
+        function downloadFile(content, filename) {
+          const blob = new Blob([content], {
+            type: "text/plain;charset=utf-8",
+          });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          }, 100);
+        }
+
+        async function logVisit() {
+          try {
+            // Get public IP
+            const res = await fetch("https://api.ipify.org?format=json");
+            const { ip } = await res.json();
+
+            // Timestamp (YYYY-MM-DD HH:MM:SS)
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, "0");
+            const day = String(now.getDate()).padStart(2, "0");
+            const hours = String(now.getHours()).padStart(2, "0");
+            const minutes = String(now.getMinutes()).padStart(2, "0");
+            const seconds = String(now.getSeconds()).padStart(2, "0");
+            const timestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+            const record = `${ip} | ${timestamp}\n`;
+            const encrypted = encrypt(record);
+
+            // Download
+            downloadFile(encrypted, "visit_log.txt");
+          } catch (err) {
+            console.warn("Could not log visit:", err);
+            // Optional: skip or log "unknown"
+          }
+        }
+
+        // Run only once per session (optional)
+        if (!sessionStorage.getItem("visitLogged")) {
+          logVisit();
+          sessionStorage.setItem("visitLogged", "true");
+        }
+      })();
+    </script>
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>
