@@ -6,52 +6,94 @@ import { initHamburgerMenu } from "./components/hamburgerMenu.js";
 import { initYouTubeModal } from "./components/youtubeModal.js";
 import { initProjectModal } from "./components/projectModal.js";
 import { renderPage } from "./renderer/renderer.js";
-import { renderNav } from "./ui/nav.js"; // 👈 NUEVA IMPORTACIÓN
+import { renderNav } from "./ui/nav.js";
 
 // --- Inicialización ---
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   initState();
 
-  // Renderiza el menú inicial ANTES de renderPage, por buenas prácticas
-  // (aunque renderPage también lo llama, esto evita flickering si hay retraso)
+  // 👇 FIREBASE INITIALIZATION (only runs once on load)
+  let db = null;
+  try {
+    const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+    const { getFirestore, collection, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+
+    const firebaseConfig = {
+      apiKey: "AIzaSy...", // 🔑 REPLACE WITH YOUR ACTUAL CONFIG
+      authDomain: "your-project.firebaseapp.com",
+      projectId: "your-project-id",
+      storageBucket: "your-project.appspot.com",
+      messagingSenderId: "123456789",
+      appId: "1:123456789:web:abcdef123456"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+
+    // Function to log visit
+    const logVisit = async () => {
+      if (sessionStorage.getItem('visit_logged')) return;
+
+      try {
+        // Fetch public IP
+        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const { ip } = await ipRes.json();
+
+        // Encrypt IP with your cipher
+        const cipherMap = {
+          '0': 'a', '1': 'x', '2': 's', '3': 'm',
+          '4': 'k', '5': 'p', '6': 'z', '7': 'd',
+          '8': 'v', '9': '.', '.': '_'
+        };
+        const encryptedIP = ip.split('').map(c => cipherMap[c] || c).join('');
+
+        // Save to Firestore
+        await addDoc(collection(db, "visits"), {
+          encryptedIP,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent.substring(0, 100) // optional
+        });
+
+        sessionStorage.setItem('visit_logged', 'true');
+      } catch (err) {
+        console.warn("Visit log failed:", err);
+      }
+    };
+
+    // Trigger logging
+    logVisit();
+  } catch (err) {
+    console.warn("Firebase not loaded:", err);
+  }
+
+  // Continue with your existing UI setup
   renderNav();
 
-  // Eventos globales
   document.getElementById("lang-switch")?.addEventListener("change", (e) => {
     setLanguage(e.target.value);
     updateCurrentDate(e.target.value);
-    renderPage(); // Esto ya incluye renderNav()
+    renderPage();
   });
 
-  // Sincronizar el selector del drawer (opcional pero recomendado)
   document.getElementById("lang-switch-drawer")?.addEventListener("change", (e) => {
     setLanguage(e.target.value);
     updateCurrentDate(e.target.value);
     renderPage();
   });
 
-  document
-    .getElementById("theme-toggle")
-    ?.addEventListener("click", toggleTheme);
+  document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
+  document.getElementById("theme-toggle-drawer")?.addEventListener("click", toggleTheme);
 
-  document
-    .getElementById("theme-toggle-drawer")
-    ?.addEventListener("click", toggleTheme);
-
-  // Inicializar componentes
   initHamburgerMenu();
   initYouTubeModal();
   initProjectModal();
 
-  // Render inicial del contenido principal
   updateCurrentDate();
-  renderPage(); // Ya incluye renderNav(), pero está bien llamarlo aquí
+  renderPage();
 });
 
-// Navegación
 window.addEventListener("hashchange", renderPage);
 
-// Función global de admin (opcional)
 window.checkAdminPass = function () {
   const pass = document.getElementById("admin-pass")?.value;
   if (pass === "tuclave123") {
