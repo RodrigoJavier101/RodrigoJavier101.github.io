@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       projectId: "rodrigo-portfolio-admin",
       storageBucket: "rodrigo-portfolio-admin.firebasestorage.app",
       messagingSenderId: "823981414979",
-      appId: "1:823981414979:web:f4a49e30173c46149352f6",
+      appId: "1:823981414979:web:8cX1f5mYeLdx3CVo4Wh9",
       measurementId: "G-P88R3L2TWR",
     };
 
