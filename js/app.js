@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Save to Firestore
         await addDoc(collection(db, "visits"), {
-          encryptedIP,
+          ip,
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent.substring(0, 100), // optional
         });
