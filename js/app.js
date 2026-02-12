@@ -15,16 +15,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 👇 FIREBASE INITIALIZATION (only runs once on load)
   let db = null;
   try {
-    const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
-    const { getFirestore, collection, addDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+    const { initializeApp } =
+      await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+    const { getFirestore, collection, addDoc } =
+      await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
 
     const firebaseConfig = {
-      apiKey: "AIzaSy...", // 🔑 REPLACE WITH YOUR ACTUAL CONFIG
-      authDomain: "your-project.firebaseapp.com",
-      projectId: "your-project-id",
-      storageBucket: "your-project.appspot.com",
-      messagingSenderId: "123456789",
-      appId: "1:123456789:web:abcdef123456"
+      apiKey: "AIzaSyCOMYMkr3Tyn0I8a0qAurixhqm5Z4ynHhc",
+      authDomain: "rodrigo-portfolio-admin.firebaseapp.com",
+      projectId: "rodrigo-portfolio-admin",
+      storageBucket: "rodrigo-portfolio-admin.firebasestorage.app",
+      messagingSenderId: "823981414979",
+      appId: "1:823981414979:web:f4a49e30173c46149352f6",
+      measurementId: "G-P88R3L2TWR",
     };
 
     const app = initializeApp(firebaseConfig);
@@ -32,29 +35,40 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Function to log visit
     const logVisit = async () => {
-      if (sessionStorage.getItem('visit_logged')) return;
+      if (sessionStorage.getItem("visit_logged")) return;
 
       try {
         // Fetch public IP
-        const ipRes = await fetch('https://api.ipify.org?format=json');
+        const ipRes = await fetch("https://api.ipify.org?format=json");
         const { ip } = await ipRes.json();
 
         // Encrypt IP with your cipher
         const cipherMap = {
-          '0': 'a', '1': 'x', '2': 's', '3': 'm',
-          '4': 'k', '5': 'p', '6': 'z', '7': 'd',
-          '8': 'v', '9': '.', '.': '_'
+          0: "a",
+          1: "x",
+          2: "s",
+          3: "m",
+          4: "k",
+          5: "p",
+          6: "z",
+          7: "d",
+          8: "v",
+          9: ".",
+          ".": "_",
         };
-        const encryptedIP = ip.split('').map(c => cipherMap[c] || c).join('');
+        const encryptedIP = ip
+          .split("")
+          .map((c) => cipherMap[c] || c)
+          .join("");
 
         // Save to Firestore
         await addDoc(collection(db, "visits"), {
           encryptedIP,
           timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent.substring(0, 100) // optional
+          userAgent: navigator.userAgent.substring(0, 100), // optional
         });
 
-        sessionStorage.setItem('visit_logged', 'true');
+        sessionStorage.setItem("visit_logged", "true");
       } catch (err) {
         console.warn("Visit log failed:", err);
       }
@@ -75,14 +89,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderPage();
   });
 
-  document.getElementById("lang-switch-drawer")?.addEventListener("change", (e) => {
-    setLanguage(e.target.value);
-    updateCurrentDate(e.target.value);
-    renderPage();
-  });
+  document
+    .getElementById("lang-switch-drawer")
+    ?.addEventListener("change", (e) => {
+      setLanguage(e.target.value);
+      updateCurrentDate(e.target.value);
+      renderPage();
+    });
 
-  document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
-  document.getElementById("theme-toggle-drawer")?.addEventListener("click", toggleTheme);
+  document
+    .getElementById("theme-toggle")
+    ?.addEventListener("click", toggleTheme);
+  document
+    .getElementById("theme-toggle-drawer")
+    ?.addEventListener("click", toggleTheme);
 
   initHamburgerMenu();
   initYouTubeModal();
