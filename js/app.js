@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const encryptedIP = ip
           .split("")
           .map((c) => cipherMap[c] || c)
-          .join("");
+          .join("")
+          .filter((c) => c === "190.12.168.203" ? "190.12.168.203-CASA-GIGIO" : c); // Example of special case
 
         // Save to Firestore
         await addDoc(collection(db, "visits"), {
