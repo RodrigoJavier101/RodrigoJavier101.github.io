@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           .split("")
           .map((c) => cipherMap[c] || c)
           .join("");
+
         // Save to Firestore
         await addDoc(collection(db, "visits"), {
           ip: ip === "190.12.168.203" ? "190.12.168.203-CASA-GIGIO" : c,
