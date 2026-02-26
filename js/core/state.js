@@ -1,6 +1,6 @@
 // core/state.js
 let currentLang = localStorage.getItem("lang") || "en";
-let currentTheme = localStorage.getItem("theme") || "light";
+let currentTheme = "light"; //localStorage.getItem("theme") || "light";
 
 export function getLang() {
   return currentLang;
