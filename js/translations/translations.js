@@ -5,7 +5,7 @@ export const translations = {
 
     about_text: "These are my CV and certifications. ",
 
-    blog_title: "Latest Articles",
+    blog_title: "Articles",
 
     projects_title: "Featured Projects",
 
@@ -31,7 +31,7 @@ export const translations = {
 
     about_text: "Estos son mi CV y mis ​​certificaciones.",
 
-    blog_title: "Últimos Artículos",
+    blog_title: "Artículos",
 
     projects_title: "Proyectos Destacados",
 
