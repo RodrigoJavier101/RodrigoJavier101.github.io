@@ -31,7 +31,7 @@ export const home = (lang) => `
   <br/>
 
   <div class="page container">
-    <h3>${translations[lang].contact_email}</h3>
-    <h3>${translations[lang].contact_phone}</h3>
+    <h3>${translations[lang].contact_emailme} <strong>${translations[lang].contact_email}</strong></h3>
+    <h3>${translations[lang].contact_phoneme} <strong>${translations[lang].contact_phone}</strong></h3>
   </div>
 `;

@@ -9,8 +9,10 @@ export const translations = {
 
     projects_title: "Featured Projects",
 
-    contact_email: "Email me: rodrigojaviergd@gmail.com",
-    contact_phone: "WSP: +56 996 095 384",
+    contact_emailme: "Email me:",
+    contact_email: "rodrigojaviergd@gmail.com",
+    contact_phoneme: "WhatsApp:",
+    contact_phone: "+56 996 095 384",
 
     nav_home: "Home",
     nav_about: "About Me",
@@ -35,8 +37,10 @@ export const translations = {
 
     projects_title: "Proyectos Destacados",
 
-    contact_email: "Email me: rodrigojaviergd@gmail.com",
-    contact_phone: "WSP: +56 996 095 384",
+    contact_emailme: "Email me:",
+    contact_email: "rodrigojaviergd@gmail.com",
+    contact_phoneme: "WhatsApp:",
+    contact_phone: "+56 996 095 384",
 
     nav_home: "Inicio",
     nav_about: "Sobre mí",
