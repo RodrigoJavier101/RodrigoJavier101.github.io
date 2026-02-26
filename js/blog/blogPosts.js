@@ -1,6 +1,3 @@
-import { videoLinksEn } from "./video-links/en.js";
-import { videoLinksEs } from "./video-links/es.js";
-
 export const blogPosts = {
   en: [
     {
@@ -25,7 +22,7 @@ export const blogPosts = {
       id: "1",
       title: "Intro a canales de YT",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
-      date: videoLinksEs[0].date,
+      date: "sept 11 2025",
       excerpt: "Una introducción al canal de YouTube.",
       content: `
         <p>Docendo Discitur, del latín "enseñando, se aprende". </p>
