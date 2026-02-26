@@ -2,7 +2,7 @@ export const blogPosts = {
   en: [
     {
       id: "1",
-      title: "The welcome and the intended theme of the channel.",
+      title: "The welcome and the intended theme of the YouTube channel.",
       date: "sept 11 2025",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
@@ -19,7 +19,7 @@ export const blogPosts = {
   es: [
     {
       id: "1",
-      title: "Bienvenida y la pretendida temática del canal.",
+      title: "Bienvenida y la pretendida temática del canal de YouTube.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       date: "sept 11 2025",
       content: `
