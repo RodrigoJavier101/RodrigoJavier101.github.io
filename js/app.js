@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document
     .getElementById("theme-toggle")
     ?.addEventListener("click", toggleTheme);
+
   document
     .getElementById("theme-toggle-drawer")
     ?.addEventListener("click", toggleTheme);
