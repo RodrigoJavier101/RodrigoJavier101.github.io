@@ -21,4 +21,6 @@ export const about = (lang) => `
       ${translations[lang].download_boot_cert}
     </a>
   </div>
+
+  
 `;

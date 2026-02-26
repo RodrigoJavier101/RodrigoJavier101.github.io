@@ -1,17 +1,16 @@
 export const translations = {
   en: {
-    home_title: "Hi, I'm Rodrigo",
-    home_desc: `Software Engineer.`,
-    home_body: `Just pay attention to the blog section and the projects that I'm working on.`,
+    home_title: "Hi, I'm Rodrigo, Software Engineer.",
+    home_body: `Please, pay attention to the blog section and the projects that I'm working on.`,
 
-    about_title: "About Me",
     about_text: "These are my CV and certifications. ",
 
     blog_title: "Latest Articles",
 
     projects_title: "Featured Projects",
 
-    contact_title: "Get in Touch, if you want.",
+    contact_email: "Email me: rodrigojaviergd@gmail.com",
+    contact_phone: "WSP: +56 996 095 384",
 
     nav_home: "Home",
     nav_about: "About Me",
@@ -27,18 +26,17 @@ export const translations = {
     download_boot_cert: "Boot Cert",
   },
   es: {
-    home_title: "Hola, soy Rodrigo",
-    home_desc: "Ingeniero de Software.",
-    home_body: `Solo presta atención a la sección de blog y a los proyectos en los que he trabajado.`,
+    home_title: "Hola, soy Rodrigo, Ingeniero de Software.",
+    home_body: `Por favor, presta atención a la sección de blog y a los proyectos en los que he trabajado.`,
 
-    about_title: "Sobre Mí",
     about_text: "Estos son mi CV y mis ​​certificaciones.",
 
     blog_title: "Últimos Artículos",
 
     projects_title: "Proyectos Destacados",
 
-    contact_title: "Contáctame, si quieres.",
+    contact_email: "Email me: rodrigojaviergd@gmail.com",
+    contact_phone: "WSP: +56 996 095 384",
 
     nav_home: "Inicio",
     nav_about: "Sobre mí",

@@ -4,7 +4,6 @@ import { getLang } from "../core/state.js";
 
 const navItems = [
   { id: "home", hash: "#home" },
-  { id: "about", hash: "#about" },
   { id: "projects", hash: "#projects" },
   { id: "blog", hash: "#blog" },
 ];
