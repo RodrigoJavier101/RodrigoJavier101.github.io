@@ -26,9 +26,7 @@ export const blog = (lang) => {
           </h3>
           <span>
             <strong>
-              (<time datetime="${post.date}">${new Date(
-                post.date,
-              ).toLocaleDateString(lang)}</time>)
+              (<time datetime="${post.date}">${post.date}</time>)
             </strong> 
             ${youtubeBtn}
           </span>
