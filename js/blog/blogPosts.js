@@ -2,10 +2,10 @@ export const blogPosts = {
   en: [
     {
       id: "1",
-      title: "Intro to YT Channels",
+      title: "Introduction to YouTube channel:",
       date: "sept 11 2025",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
-      excerpt: "An introduction to the YouTube channel.",
+      excerpt: "The welcome and the intended theme of the channel.",
       content: `
       <p>Docendo Discitur, from the Latin "by teaching, one learns." </p>
       <p>I make this effort to create explanatory videos with the goal of personally improving my knowledge through the technique of trying to teach. </p>
@@ -20,10 +20,10 @@ export const blogPosts = {
   es: [
     {
       id: "1",
-      title: "Intro a canales de YT",
+      title: "Introducción al canal de YouTube",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       date: "sept 11 2025",
-      excerpt: "Una introducción al canal de YouTube.",
+      excerpt: "Bienvenida y la pretendida temática del canal.",
       content: `
         <p>Docendo Discitur, del latín "enseñando, se aprende". </p>
           <p>Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar personalmente en el conocimiento mediante la técnica de intentar enseñar.  </p>
