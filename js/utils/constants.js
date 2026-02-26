@@ -4,6 +4,7 @@ export const youtubeUrls = {
   tr: "https://www.youtube.com/@DocendoDiscitur-TR",
   it: "https://www.youtube.com/@DocendoDiscitur-IT",
   de: "https://www.youtube.com/@DocendoDiscitur-DE",
+  il: "https://www.youtube.com/@DocendoDiscitur-IL",
 };
 
 export const langs = {

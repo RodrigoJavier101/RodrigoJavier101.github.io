@@ -1,5 +1,5 @@
 import { formatearFecha } from "./blogFunctions.js";
-import { langs } from "../translations/constants.js";
+import { langs } from "../utils/constants.js";
 
 export const blogPosts = {
   en: [

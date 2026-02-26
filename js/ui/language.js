@@ -1,6 +1,6 @@
 // ui/language.js
 import { translations } from "../translations/translations.js";
-import { youtubeUrls } from "../translations/constants.js";
+import { youtubeUrls } from "../utils/constants.js";
 import { getLang, setLang } from "../core/state.js";
 
 // ✅ Función privada para sincronizar todos los selects
