@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    home_title: "Hi, my name is Rodrigo, Software Engineer.",
+    home_title: "Hi, my name is Rodrigo Javier, Software Engineer.",
     home_body: `Please, pay attention to the <strong>blog</strong> section and the <strong>projects</strong> that I'm working on.`,
 
     about_text: "And These are my CV and certifications. ",
@@ -27,7 +27,7 @@ export const translations = {
     download_boot_cert: "Boot Cert",
   },
   es: {
-    home_title: "Hola, mi nombre Rodrigo, Ingeniero de Software.",
+    home_title: "Hola, mi nombre Rodrigo Javier, Ingeniero de Software.",
     home_body: `Por favor, presta atención a la sección de <strong>blog</strong> y a los <strong>proyectos</strong> en los que he trabajado.`,
 
     about_text: "Y éstos son mi CV y ​​certificaciones.",
