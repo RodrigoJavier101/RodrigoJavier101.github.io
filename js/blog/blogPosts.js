@@ -4,10 +4,10 @@ import { videoLinksEs } from "./video-links/es.js";
 export const blogPosts = {
   en: [
     {
-      id: videoLinksEn[0].id,
-      title: videoLinksEn[0].title,
-      youtubeUrl: videoLinksEn[0].url,
-      date: videoLinksEn[0].date,
+      id: "1",
+      title: "Intro to YT Channels",
+      date: "sept 11 2025",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       excerpt: "An introduction to the YouTube channel.",
       content: `
       <p>Docendo Discitur, from the Latin "by teaching, one learns." </p>
@@ -22,9 +22,9 @@ export const blogPosts = {
   ],
   es: [
     {
-      id: videoLinksEs[0].id,
-      title: videoLinksEs[0].title,
-      youtubeUrl: videoLinksEs[0].url,
+      id: "1",
+      title: "Intro a canales de YT",
+      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       date: videoLinksEs[0].date,
       excerpt: "Una introducción al canal de YouTube.",
       content: `

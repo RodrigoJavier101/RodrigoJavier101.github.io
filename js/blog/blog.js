@@ -2,7 +2,7 @@ import { translations } from "../translations/translations.js";
 import { blogPosts } from "../blog/blogPosts.js";
 // import { getBlogs } from "./firebase.js";
 
-// mejor a mano, luego lo veo para poder suir blogs de acuerdo a lo que vay creciendo
+// mejor a mano, luego lo veo para poder subir blogs de acuerdo a lo que vaya creciendo
 export const blog = (lang) => {
   // const blogs = await getBlogs();
   // const posts = blogs
@@ -22,11 +22,16 @@ export const blog = (lang) => {
       return `
         <article class="blog-post-preview">
           <h3><a href="#blog/${post.id}">${post.title}</a></h3>
-          <time datetime="${post.date}">${new Date(
-        post.date
-      ).toLocaleDateString(lang)}</time>
-          <p>${post.excerpt}</p>
-          ${youtubeBtn}
+          <p>
+            - ${post.excerpt}    
+            <strong>
+              (<time datetime="${post.date}">${new Date(
+                post.date,
+              ).toLocaleDateString(lang)}</time>)
+            </strong> 
+            ${youtubeBtn}
+          </p>
+        
         </article>
       `;
     })
