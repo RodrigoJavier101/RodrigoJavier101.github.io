@@ -21,17 +21,17 @@ export const blog = (lang) => {
         : "";
       return `
         <article class="blog-post-preview">
-          <h3><a href="#blog/${post.id}">${post.title}</a></h3>
-          <p>
-            - ${post.excerpt}    
+          <h3>
+            <a href="#blog/${post.id}">${post.title}</a>
+          </h3>
+          <span>
             <strong>
               (<time datetime="${post.date}">${new Date(
                 post.date,
               ).toLocaleDateString(lang)}</time>)
             </strong> 
             ${youtubeBtn}
-          </p>
-        
+          </span>
         </article>
       `;
     })
