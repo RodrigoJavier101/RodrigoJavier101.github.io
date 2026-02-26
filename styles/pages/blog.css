@@ -1,22 +1,19 @@
 .blog-post-preview {
   display: flex;
-  align-items: center;
-  gap: 0.75rem; /* Espacio uniforme entre título, fecha y botón */
+  flex-direction: column; /* ✅ Apila verticalmente */
+  align-items: flex-start;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
-  flex-wrap: nowrap; /* ✅ Fuerza una sola línea en desktop */
-  overflow: hidden; /* ✅ Evita desbordamiento */
 }
 
-/* Título: sin flex:1, solo se ajusta a su contenido */
 .blog-post-preview h3 {
   margin: 0;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-shrink: 1; /* ✅ Permite que se comprima si el espacio es limitado */
-  min-width: 0; /* ✅ Necesario para que ellipsis funcione */
 }
 
 .blog-post-preview h3 a {
@@ -25,38 +22,14 @@
   font-weight: 600;
 }
 
-.blog-post-preview h3 a:hover {
-  text-decoration: underline;
-}
-
-/* Metadata (fecha + botón): compactos y juntos */
 .blog-post-preview p {
   margin: 0;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   white-space: nowrap;
-  flex-shrink: 0; /* ✅ No se comprime */
   color: var(--muted-text, #888);
   font-size: 0.9rem;
-}
-
-/* Botón de YouTube */
-.blog-post-preview .youtube-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.2rem 0.5rem;
-  background: var(--accent, #0066cc);
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-
-.blog-post-preview .youtube-btn:hover {
-  opacity: 0.9;
 }
 
 /* 📱 Responsive: en móvil, permitir salto si es necesario */
@@ -65,13 +38,13 @@
     flex-wrap: wrap;
     gap: 0.4rem;
   }
-  
+
   .blog-post-preview h3 {
     flex: 1 1 100%;
     white-space: normal;
     text-overflow: unset;
   }
-  
+
   .blog-post-preview p {
     margin-left: 0.25rem;
     font-size: 0.85rem;

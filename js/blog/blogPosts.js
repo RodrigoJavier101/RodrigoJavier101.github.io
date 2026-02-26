@@ -1,9 +1,16 @@
+import { formatearFecha } from "./blogFunctions.js";
+
+const translations = {
+  en: "en-US",
+  es: "es-ES",
+};
+
 export const blogPosts = {
   en: [
     {
       id: "1",
       title: "The welcome and the intended theme of the YouTube channel.",
-      date: "sept 11 2025",
+      date: formatearFecha("2025-09-11", translations.en).complete,
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
       <p><strong>Docendo Discitur</strong>, from the Latin "by teaching, one learns." </p>
@@ -21,7 +28,7 @@ export const blogPosts = {
       id: "1",
       title: "Bienvenida y la pretendida temática del canal de YouTube.",
       youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
-      date: "sept 11 2025",
+      date: formatearFecha("2025-09-11", translations.es).complete,
       content: `
         <p><strong>Docendo Discitur</strong>, del latín "enseñando, se aprende". </p>
         <p>Este esfuerzo de hacer videos explicativos lo hago con la meta de mejorar personalmente en el conocimiento mediante la técnica de intentar enseñar.  </p>
