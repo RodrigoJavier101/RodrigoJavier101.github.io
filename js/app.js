@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent.substring(0, 100), // optional
           });
+        } else {
+          console.warn("Visit from my ip ignored:");
         }
 
         sessionStorage.setItem("visit_logged", "true");
