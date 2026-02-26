@@ -62,11 +62,21 @@ document.addEventListener("DOMContentLoaded", async () => {
           .join("");
 
         // Save to Firestore
-        await addDoc(collection(db, "visits"), {
+        /* 
+         await addDoc(collection(db, "visits"), {
           ip: ip === "190.12.168.203" ? "190.12.168.203-CASA-GIGIO" : c,
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent.substring(0, 100), // optional
         });
+        */
+
+        if (ip != "190.12.168.203") {
+          await addDoc(collection(db, "visits"), {
+            ip,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent.substring(0, 100), // optional
+          });
+        }
 
         sessionStorage.setItem("visit_logged", "true");
       } catch (err) {
