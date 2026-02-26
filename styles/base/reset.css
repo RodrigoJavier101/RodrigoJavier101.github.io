@@ -40,3 +40,8 @@ h6 {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
