@@ -42,6 +42,6 @@ h6 {
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
 }
