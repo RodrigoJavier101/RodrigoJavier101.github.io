@@ -5,3 +5,8 @@ export const youtubeUrls = {
   it: "https://www.youtube.com/@DocendoDiscitur-IT",
   de: "https://www.youtube.com/@DocendoDiscitur-DE",
 };
+
+export const langs = {
+  en: "en-US",
+  es: "es-ES",
+};
