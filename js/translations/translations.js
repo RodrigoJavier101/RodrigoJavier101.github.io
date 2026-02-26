@@ -1,9 +1,9 @@
 export const translations = {
   en: {
     home_title: "Hi, my name is Rodrigo, Software Engineer.",
-    home_body: `Please, pay attention to the blog section and the projects that I'm working on.`,
+    home_body: `Please, pay attention to the <strong>blog</strong> section and the <strong>projects</strong> that I'm working on.`,
 
-    about_text: "These are my CV and certifications. ",
+    about_text: "And These are my CV and certifications. ",
 
     blog_title: "Articles",
 
@@ -15,7 +15,6 @@ export const translations = {
     contact_phone: "+56 996 095 384",
 
     nav_home: "Home",
-    nav_about: "About Me",
     nav_projects: "Projects",
     nav_blog: "Blog",
     nav_contact: "Contact",
@@ -29,21 +28,20 @@ export const translations = {
   },
   es: {
     home_title: "Hola, mi nombre Rodrigo, Ingeniero de Software.",
-    home_body: `Por favor, presta atención a la sección de blog y a los proyectos en los que he trabajado.`,
+    home_body: `Por favor, presta atención a la sección de <strong>blog</strong> y a los <strong>proyectos</strong> en los que he trabajado.`,
 
-    about_text: "Estos son mi CV y mis ​​certificaciones.",
+    about_text: "Y éstos son mi CV y ​​certificaciones.",
 
     blog_title: "Artículos",
 
     projects_title: "Proyectos Destacados",
 
     contact_emailme: "Email me:",
-    contact_email: "rodrigojaviergd@gmail.com",
+    contact_email: "<italic>rodrigojaviergd@gmail.com</italic>",
     contact_phoneme: "WhatsApp:",
     contact_phone: "+56 996 095 384",
 
     nav_home: "Inicio",
-    nav_about: "Sobre mí",
     nav_projects: "Proyectos",
     nav_blog: "Blog",
     nav_contact: "Contacto",
