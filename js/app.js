@@ -8,6 +8,22 @@ import { initProjectModal } from "./components/projectModal.js";
 import { renderPage } from "./renderer/renderer.js";
 import { renderNav } from "./ui/nav.js";
 
+const YOUTUBE_CHANNELS = {
+  en: "https://www.youtube.com/@DocendoDiscitur-EN",
+  es: "https://www.youtube.com/@DocendoDiscitur-ES",
+};
+
+function updateYouTubeLink(lang) {
+  const youtubeLink = document.getElementById("youtube-link");
+  if (youtubeLink && YOUTUBE_CHANNELS[lang]) {
+    youtubeLink.href = YOUTUBE_CHANNELS[lang];
+    youtubeLink.setAttribute(
+      "aria-label",
+      `YouTube (${lang === "en" ? "English" : "Español"})`,
+    );
+  }
+}
+
 // --- Inicialización ---
 document.addEventListener("DOMContentLoaded", async () => {
   initState();
@@ -94,6 +110,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Continue with your existing UI setup
   renderNav();
+
+  // ✅ Inicializar YouTube link con idioma actual
+  const initialLang =
+    window.__APP_STATE?.language ||
+    localStorage.getItem("preferred-lang") ||
+    document.getElementById("lang-switch")?.value ||
+    "en";
+
+  updateYouTubeLink(initialLang);
+
+  // 👇 Language change handlers (refactorizados para DRY)
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    updateCurrentDate(lang);
+    updateYouTubeLink(lang);
+    renderPage();
+  };
+
+  document.getElementById("lang-switch")?.addEventListener("change", (e) => {
+    handleLanguageChange(e.target.value);
+  });
 
   document.getElementById("lang-switch")?.addEventListener("change", (e) => {
     setLanguage(e.target.value);
