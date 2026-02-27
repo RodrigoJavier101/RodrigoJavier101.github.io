@@ -3,7 +3,9 @@
 
 /* Fuente monoespaciada: JetBrains Mono (ideal para código) */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+/* ✅ Fuente principal: Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* Tema oscuro (por defecto) */
@@ -18,8 +20,11 @@
   --color-primary: var(--accent);
   --color-text-secondary: var(--text-secondary);
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  /* ✅ Fuentes actualizadas */
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
+  
+  /* ✅ JetBrains Mono para código (recomendado) */
   --font-mono: "JetBrains Mono", Consolas, Monaco, "Courier New", monospace;
 
   --zindex-ytmodal: 20;

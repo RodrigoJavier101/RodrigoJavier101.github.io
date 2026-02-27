@@ -14,9 +14,9 @@ export const projects = {
     /* 2 */
     {
       id: "2",
-      title: "Docendo english",
-      description: "An educational platform.",
-      tech: ["Starting", "Computer Science", "Science"],
+      title: "Sellers system (Merdado Libre)",
+      description: "Integration for International Logistics.",
+      tech: ["Node", "Backend", "Docker", "PostgreSQL"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
@@ -38,10 +38,10 @@ export const projects = {
     /* 2 */
     {
       id: "2",
-      title: "Docendo español",
-      description: "Plataforma educativa.",
-      tech: ["Empezando", "Informática", "Ciencia"],
-      liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
+      title: "Sistema de ventas (Merdado Libre)",
+      description: "Integración para logística internacional.",
+      tech: ["Node", "Backend", "Docker", "PostgreSQL"],
+      liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
       image: "./assets/images/docendo-preview.png",

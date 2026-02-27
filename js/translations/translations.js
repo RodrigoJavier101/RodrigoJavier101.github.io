@@ -3,15 +3,13 @@ export const translations = {
     home_title: "Hi, my name is Rodrigo Javier, Software Engineer.",
     home_body: `Please, pay attention to the <strong>blog</strong> section and the <strong>projects</strong> that I'm working on.`,
 
-    about_text: "And These are my CV and certifications. ",
-
     blog_title: "Articles",
 
     projects_title: "Featured Projects",
 
     contact_emailme: "Email me:",
     contact_email: "rodrigojaviergd@gmail.com",
-    contact_phoneme: "WhatsApp:",
+    contact_phoneme: "WhatsApp",
     contact_phone: "+56 996 095 384",
 
     nav_home: "Home",
@@ -38,7 +36,7 @@ export const translations = {
 
     contact_emailme: "Email me:",
     contact_email: "<italic>rodrigojaviergd@gmail.com</italic>",
-    contact_phoneme: "WhatsApp:",
+    contact_phoneme: "WhatsApp",
     contact_phone: "+56 996 095 384",
 
     nav_home: "Inicio",

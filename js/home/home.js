@@ -9,7 +9,6 @@ export const home = (lang) => `
 
     <!-- About Section -->
   <div class="page container">
-    <p>${translations[lang].about_text}</p>
     <a href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume.pdf" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
       ${translations[lang].download_cv}
@@ -31,7 +30,7 @@ export const home = (lang) => `
   <br/>
 
   <div class="page container">
-    <h3>${translations[lang].contact_emailme} <a href="mailto:${translations[lang].contact_email}" target="_blank" rel="noopener noreferrer"><strong><i>${translations[lang].contact_email}</i></strong></a></h3>
-    <h3>${translations[lang].contact_phoneme} <a href="https://wa.me/${translations[lang].contact_phone.replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">${translations[lang].contact_phone}</a></h3>
+    <h3><a href="mailto:${translations[lang].contact_email}" target="_blank" rel="noopener noreferrer"><i>${translations[lang].contact_email}</i></a></h3>
+    <h3><a href="https://wa.me/${translations[lang].contact_phone.replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">${translations[lang].contact_phone}</a> (${translations[lang].contact_phoneme})</h3>
   </div>
 `;
