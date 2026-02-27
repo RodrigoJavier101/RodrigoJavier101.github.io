@@ -14,18 +14,30 @@ export function initProjectModal() {
     const projectId = card.getAttribute("data-project-id");
     const lang = getLang();
     const projList = projects[lang] || projects.en;
-    const project = projList.find(p => p.id === projectId);
+    const project = projList.find((p) => p.id === projectId);
 
     if (project) {
       const content = `
         <h2>${project.title}</h2>
         <p>${project.description}</p>
         <div class="tech-tags">
-          ${project.tech.map(tag => `<span class="tech-tag">${tag}</span>`).join("")}
+          ${project.tech.map((tag) => `<span class="tech-tag">${tag}</span>`).join("")}
         </div>
         <div class="modal-buttons">
-          ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="btn-live">Ver en vivo</a>` : ""}
-          ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="btn-github">Código en GitHub</a>` : ""}
+          ${
+            project.liveUrlTopic
+              ? `<a href="${project.liveUrl}" target="_blank" class="btn-live">
+                        ${project.liveUrlTopic}
+                 </a>`
+              : ""
+          }
+          ${
+            project.githubUrlTopic
+              ? `<a href="${project.githubUrl}" target="_blank" class="btn-github">
+                    ${project.githubUrlTopic}
+                 </a>`
+              : ""
+          }
         </div>
       `;
       document.getElementById("project-modal-content").innerHTML = content;
@@ -34,7 +46,9 @@ export function initProjectModal() {
   });
 
   if (projectClose) {
-    projectClose.addEventListener("click", () => projectModal.classList.remove("is-active"));
+    projectClose.addEventListener("click", () =>
+      projectModal.classList.remove("is-active"),
+    );
   }
 
   projectModal.addEventListener("click", (e) => {

@@ -7,8 +7,10 @@ export const projects = {
       description: "Android app about Chilean politics.",
       tech: ["mobile", "kotlin", "politics", "webscraping"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
+      liveUrlTopic: "",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      githubUrlTopic: "",
       image: "./assets/images/docendo-preview.png",
     },
     /* 2 */
@@ -18,8 +20,10 @@ export const projects = {
       description: "Integration for International Logistics.",
       tech: ["Node", "Backend", "Docker", "PostgreSQL"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
+      liveUrlTopic: "",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      githubUrlTopic: "",
       image: "./assets/images/docendo-preview.png",
     },
   ],
@@ -31,8 +35,10 @@ export const projects = {
       description: "Android app sobre política chilena.",
       tech: ["movil", "kotlin", "política", "webscraping"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
+      liveUrlTopic: "",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      githubUrlTopic: "",
       image: "./assets/images/docendo-preview.png",
     },
     /* 2 */
@@ -42,8 +48,10 @@ export const projects = {
       description: "Integración para logística internacional.",
       tech: ["Node", "Backend", "Docker", "PostgreSQL"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
+      liveUrlTopic: "",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      githubUrlTopic: "",
       image: "./assets/images/docendo-preview.png",
     },
   ],
