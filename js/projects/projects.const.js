@@ -1,7 +1,19 @@
 export const projects = {
   en: [
+    /* 1 */
     {
-      id: "docendo",
+      id: "1",
+      title: "Docendo Discitur",
+      description: "An educational platform.",
+      tech: ["Starting", "Computer Science", "Science"],
+      liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
+      githubUrl:
+        "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      image: "./assets/images/docendo-preview.png",
+    },
+    /* 2 */
+    {
+      id: "2",
       title: "Docendo Discitur",
       description: "An educational platform.",
       tech: ["Starting", "Computer Science", "Science"],
@@ -12,8 +24,20 @@ export const projects = {
     },
   ],
   es: [
+    /* 1 */
     {
-      id: "docendo",
+      id: "1",
+      title: "Docendo Discitur",
+      description: "Plataforma educativa.",
+      tech: ["Empezando", "Informática", "Ciencia"],
+      liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
+      githubUrl:
+        "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
+      image: "./assets/images/docendo-preview.png",
+    },
+    /* 2 */
+    {
+      id: "2",
       title: "Docendo Discitur",
       description: "Plataforma educativa.",
       tech: ["Empezando", "Informática", "Ciencia"],
