@@ -4,8 +4,8 @@ import { getLang } from "../core/state.js";
 
 const navItems = [
   { id: "home", hash: "#home" },
-  { id: "projects", hash: "#projects" },
   { id: "blog", hash: "#blog" },
+  { id: "projects", hash: "#projects" },
 ];
 
 export function renderNav() {
