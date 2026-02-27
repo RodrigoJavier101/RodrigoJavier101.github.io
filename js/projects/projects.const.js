@@ -3,9 +3,9 @@ export const projects = {
     /* 1 */
     {
       id: "1",
-      title: "Docendo Discitur",
-      description: "An educational platform.",
-      tech: ["Starting", "Computer Science", "Science"],
+      title: "Lighthouse of Chilean politics",
+      description: "Android app about Chilean politics.",
+      tech: ["mobile", "kotlin", "politics"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
@@ -14,7 +14,7 @@ export const projects = {
     /* 2 */
     {
       id: "2",
-      title: "Docendo Discitur",
+      title: "Docendo english",
       description: "An educational platform.",
       tech: ["Starting", "Computer Science", "Science"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
@@ -27,9 +27,9 @@ export const projects = {
     /* 1 */
     {
       id: "1",
-      title: "Docendo Discitur",
-      description: "Plataforma educativa.",
-      tech: ["Empezando", "Informática", "Ciencia"],
+      title: "Faro de la política chilena",
+      description: "Android app sobre política chilena.",
+      tech: ["movil", "kotlin", "política"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
@@ -38,7 +38,7 @@ export const projects = {
     /* 2 */
     {
       id: "2",
-      title: "Docendo Discitur",
+      title: "Docendo español",
       description: "Plataforma educativa.",
       tech: ["Empezando", "Informática", "Ciencia"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
