@@ -5,7 +5,7 @@ export const projects = {
       id: "1",
       title: "Lighthouse of Chilean politics",
       description: "Android app about Chilean politics.",
-      tech: ["mobile", "kotlin", "politics"],
+      tech: ["mobile", "kotlin", "politics", "webscraping"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-EN",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",
@@ -29,7 +29,7 @@ export const projects = {
       id: "1",
       title: "Faro de la política chilena",
       description: "Android app sobre política chilena.",
-      tech: ["movil", "kotlin", "política"],
+      tech: ["movil", "kotlin", "política", "webscraping"],
       liveUrl: "https://www.youtube.com/@DocendoDiscitur-ES",
       githubUrl:
         "https://github.com/RodrigoJavier101/rodrigojavier101.github.io",

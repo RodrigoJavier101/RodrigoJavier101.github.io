@@ -28,8 +28,6 @@ export const translations = {
     home_title: "Hola, mi nombre Rodrigo Javier, Ingeniero de Software.",
     home_body: `Por favor, presta atención a la sección de <strong>blog</strong> y a los <strong>proyectos</strong> en los que he trabajado.`,
 
-    about_text: "Y éstos son mi CV y ​certificaciones.",
-
     blog_title: "Artículos",
 
     projects_title: "Proyectos Destacados",
