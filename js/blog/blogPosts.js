@@ -3,6 +3,7 @@ import { langs } from "../utils/constants.js";
 
 export const blogPosts = {
   en: [
+    /* 1 */
     {
       id: "1",
       title: "The welcome and the intended theme of the YouTube channel.",
@@ -18,8 +19,10 @@ export const blogPosts = {
         <p>Salut!</p>
       `,
     },
+    /* 2 */
   ],
   es: [
+    /* 1 */
     {
       id: "1",
       title: "Bienvenida y la pretendida temática del canal de YouTube.",
@@ -35,5 +38,6 @@ export const blogPosts = {
         <p>Salut!</p>
       `,
     },
+    /* 2 */
   ],
 };
