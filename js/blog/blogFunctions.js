@@ -1,4 +1,4 @@
-export function formatearFecha(fechaString, lang) {
+export function formattDate(fechaString, lang) {
   const date = new Date(fechaString + "T00:00:00");
 
   return {
