@@ -34,7 +34,7 @@ export const blog = (lang) => {
             <strong>
               <time datetime="${post.date}">${post.date}</time>
             </strong> 
-            ${youtubeBtn}
+          <!--   ${youtubeBtn} -->
           </span>
         </article>
       `;
