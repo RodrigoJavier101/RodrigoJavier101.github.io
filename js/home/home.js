@@ -28,9 +28,17 @@ export const home = (lang) => `
   </div>
 
   <br/>
-
+    <!-- Contact Section -->
   <div class="page container">
-    <h3><a href="mailto:${translations[lang].contact_email}" target="_blank" rel="noopener noreferrer"><i>${translations[lang].contact_email}</i></a></h3>
-    <h3><a href="https://wa.me/${translations[lang].contact_phone.replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">${translations[lang].contact_phone}</a> (${translations[lang].contact_phoneme})</h3>
+    <p>${translations[lang].home_body || ""}</p>
+  </div>
+  
+  <div class="page container">
+    <h3>
+    <a class="" href="mailto:${translations[lang].contact_email}" target="_blank" rel="noopener noreferrer"><i>rodrigojaviergd@gmail.com</i></a>
+    </h3>
+    <h3>
+    <a class="" href="https://wa.me/${translations[lang].contact_phone.replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <h3>
   </div>
 `;

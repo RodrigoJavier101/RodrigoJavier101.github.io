@@ -12,6 +12,8 @@ export const translations = {
     contact_phoneme: "WhatsApp",
     contact_phone: "+56 996 095 384",
 
+    contact_alt:"Contact :",
+
     nav_home: "Home",
     nav_projects: "Projects",
     nav_blog: "Blog",
@@ -36,6 +38,8 @@ export const translations = {
     contact_email: "<italic>rodrigojaviergd@gmail.com</italic>",
     contact_phoneme: "WhatsApp",
     contact_phone: "+56 996 095 384",
+
+    contact_alt:"Medios de contacto:",
 
     nav_home: "Inicio",
     nav_projects: "Proyectos",
