@@ -1,4 +1,8 @@
-import { translations } from "../translations/translations.js";
+// renderer/pages/blog.js
+
+// ✅ Importar helpers de traducción (nuevo sistema)
+import { t } from "../translations/i18n.js";
+
 import { blogPosts } from "../blog/blogPosts.js";
 // import { getBlogs } from "./firebase.js";
 
@@ -14,31 +18,34 @@ export const blog = (lang) => {
   //   .filter((c) => c !== undefined);
 
   const posts = blogPosts[lang] || blogPosts.en;
+  
   const postList = posts
     .map((post) => {
       const youtubeBtn = post.youtubeUrl
         ? `<button type="button" class="youtube-btn-small" data-youtube-url="${post.youtubeUrl}">🎥 Video</button>`
         : "";
+      
       return `
         <article class="blog-post-preview">
           <h3>
             <a href="#blog/${post.id}">${post.title}</a>
           </h3>
-          <span>
+          <span class="post-meta">
             <strong>
-              (<time datetime="${post.date}">${post.date}</time>)
+              <time datetime="${post.date}">${post.date}</time>
             </strong> 
-            
+            ${youtubeBtn}
           </span>
         </article>
       `;
     })
     .join("");
+    
   return `
     <div class="page container">
-      <h2>${translations[lang].blog_title}</h2>
+      <!-- ✅ Nueva forma: usar t("key", lang) -->
+      <h2>${t("blog_title", lang)}</h2>
       ${postList}
     </div>
   `;
 };
-// ${youtubeBtn}

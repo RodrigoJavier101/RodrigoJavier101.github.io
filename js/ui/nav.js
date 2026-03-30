@@ -1,5 +1,7 @@
 // ui/nav.js
-import { translations } from "../translations/translations.js";
+
+// ✅ Importar helper de traducción
+import { t } from "../translations/i18n.js";
 import { getLang } from "../core/state.js";
 
 const navItems = [
@@ -10,7 +12,6 @@ const navItems = [
 
 export function renderNav() {
   const lang = getLang();
-  const t = translations[lang];
 
   const mainNav = document.getElementById("main-nav");
   const drawerNav = document.getElementById("drawer-nav");
@@ -22,7 +23,11 @@ export function renderNav() {
     const link = document.createElement("a");
     link.href = item.hash;
     link.setAttribute("data-page", item.id);
-    link.textContent = t[`nav_${item.id}`] || item.id.charAt(0).toUpperCase() + item.id.slice(1);
+    
+    // ✅ Nueva forma: usar t("key", lang)
+    link.textContent = t(`nav_${item.id}`, lang) 
+      || item.id.charAt(0).toUpperCase() + item.id.slice(1);
+    
     return link;
   };
 

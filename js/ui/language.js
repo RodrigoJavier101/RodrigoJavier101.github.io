@@ -1,5 +1,7 @@
 // ui/language.js
-import { translations } from "../translations/translations.js";
+
+// ✅ Importar helper que genera objeto plano (consistente con nav.js y projects.js)
+import { getTranslationsForLang } from "../translations/i18n.js";
 import { youtubeUrls } from "../utils/constants.js";
 import { getLang, setLang } from "../core/state.js";
 
@@ -12,18 +14,28 @@ function syncLanguageSelectors(lang) {
 
 export function setLanguage(lang) {
   setLang(lang);
-  const t = translations[lang] || translations.en;
+  
+  // ✅ Generar objeto plano de traducciones para este idioma
+  const t = getTranslationsForLang(lang);
 
-  // Actualizar menú (aunque ahora usas renderNav, esto puede quedar obsoleto)
+  // Actualizar menú: elementos con data-page
   document.querySelectorAll("[data-page]").forEach((el) => {
     const key = `nav_${el.dataset.page}`;
+    // ✅ Ahora t[key] funciona porque t es un objeto plano
     el.textContent = t[key] || el.dataset.page;
   });
 
-  // Actualizar YouTube
+  // Actualizar YouTube link
   const ytLink = document.getElementById("youtube-link");
-  if (ytLink) ytLink.href = youtubeUrls[lang] || youtubeUrls.en;
+  if (ytLink) {
+    ytLink.href = youtubeUrls[lang] || youtubeUrls.en;
+    // ✅ Opcional: actualizar aria-label si lo usas
+    ytLink.setAttribute("aria-label", `YouTube (${lang === "en" ? "English" : "Español"})`);
+  }
 
-  // ✅ Sincronizar ambos selects
+  // ✅ Sincronizar ambos selects (header + drawer)
   syncLanguageSelectors(lang);
+  
+  // ✅ Actualizar atributo lang del HTML para accesibilidad + SEO
+  document.documentElement.lang = lang;
 }

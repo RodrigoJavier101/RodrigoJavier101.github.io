@@ -1,44 +1,45 @@
-import { translations } from "../translations/translations.js";
+// import { translations } from "../translations/translations.js";
+import { t } from "../translations/i18n.js";
 
 export const home = (lang) => `
  
   <div class="page container">
-    <h1>${translations[lang].home_title}</h1>
-    <p>${translations[lang].home_body || ""}</p>
+    <h1>${t("home_title", lang)}</h1>
+    <p>${t("home_body", lang) || ""}</p>
   </div>
 
     <!-- About Section -->
   <div class="page container">
     <a href="./assets/cv/Rodrigo_Javier_Garrido_Dagle-resume.pdf" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
-      ${translations[lang].download_cv}
+      ${t("download_cv", lang)}
     </a>
     <a href="https://cert.efset.org/pNEGCW" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
-      ${translations[lang].download_eng_cert}
+      ${t("download_eng_cert", lang)}
     </a>
     <a href="./assets/cert/facilitator_certificate.pdf" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
-      ${translations[lang].download_facil_cert}
+      ${t("download_facil_cert", lang)}
     </a>
     <a href="https://credly.com/badges/cc6bc067-4834-468d-9fc2-27c4ea2955ed?source=linked_in_profile" 
        class="cv-link" target="_blank" rel="noopener noreferrer">
-      ${translations[lang].download_boot_cert}
+      ${t("download_boot_cert", lang)}
     </a>
   </div>
 
   <br/>
     <!-- Contact Section -->
   <div class="page container">
-    <p>${translations[lang].home_body || ""}</p>
+    <p>${t("home_body", lang) || ""}</p>
   </div>
   
   <div class="page container">
     <h3>
-    <a class="" href="mailto:${translations[lang].contact_email}" target="_blank" rel="noopener noreferrer"><i>rodrigojaviergd@gmail.com</i></a>
+    <a class="" href="mailto:${t("contact_email", lang)}" target="_blank" rel="noopener noreferrer"><i>rodrigojaviergd@gmail.com</i></a>
     </h3>
     <h3>
-    <a class="" href="https://wa.me/${translations[lang].contact_phone.replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="" href="https://wa.me/${t("contact_phone", lang).replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <h3>
   </div>
 `;
