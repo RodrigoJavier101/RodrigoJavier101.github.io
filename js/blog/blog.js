@@ -1,6 +1,3 @@
-// renderer/pages/blog.js
-
-// ✅ Importar helpers de traducción (nuevo sistema)
 import { t } from "../translations/i18n.js";
 
 import { blogPosts } from "../blog/blogPosts.js";
