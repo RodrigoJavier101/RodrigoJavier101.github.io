@@ -29,11 +29,8 @@ export const home = (lang) => `
   </div>
 
   <br/>
-    <!-- Contact Section -->
-  <div class="page container">
-    <p>${t("home_body", lang) || ""}</p>
-  </div>
-  
+
+  <!-- Contact Section -->
   <div class="page container">
     <h3>
     <a class="" href="mailto:${t("contact_email", lang)}" target="_blank" rel="noopener noreferrer"><i>rodrigojaviergd@gmail.com</i></a>

@@ -1,6 +1,7 @@
 import { t } from "../translations/i18n.js";
-
 import { blogPosts } from "../blog/blogPosts.js";
+
+
 // import { getBlogs } from "./firebase.js";
 
 // mejor a mano, luego lo veo para poder subir blogs de acuerdo a lo que vaya creciendo
