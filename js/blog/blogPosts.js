@@ -8,7 +8,7 @@ export const blogPosts = {
       id: "1",
       title: "The welcome and the intended theme of the YouTube channel.",
       date: formattDate("2025-09-11", langs.en).complete,
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+      youtubeUrl: "",//"https://www.youtube.com/watch?v=jNQXAC9IVRw",
       content: `
         <p><strong>Docendo Discitur</strong>, from the Latin "by teaching, one learns." </p>
         <p>I make this effort to create explanatory videos with the goal of personally improving my knowledge through the technique of trying to teach. </p>

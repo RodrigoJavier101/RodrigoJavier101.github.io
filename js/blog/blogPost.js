@@ -19,7 +19,7 @@ export const blogPost = (lang, postId) => {
       <a href="#blog" class="back-link">← Back to Blog</a>
       <h1>${post.title}</h1>
       <time datetime="${post.date}">${post.date}</time>
-      ${youtubeBtn}
+      <!-- ${youtubeBtn} -->
       <div class="blog-content">${post.content}</div>
     </div>
   `;
