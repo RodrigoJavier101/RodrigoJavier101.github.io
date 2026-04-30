@@ -26,7 +26,7 @@ export const blogPosts = {
     {
       id: "1",
       title: "Bienvenida y la pretendida temática del canal de YouTube.",
-      youtubeUrl: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+      youtubeUrl: "",//"https://www.youtube.com/watch?v=jNQXAC9IVRw",
       date: formattDate("2025-09-11", langs.es).complete,
       content: `
         <p><strong>Docendo Discitur</strong>, del latín "enseñando, se aprende". </p>

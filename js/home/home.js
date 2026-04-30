@@ -32,11 +32,17 @@ export const home = (lang) => `
 
   <!-- Contact Section -->
   <div class="page container">
-    <h3>
-    <a class="" href="mailto:${t("contact_email", lang)}" target="_blank" rel="noopener noreferrer"><i>rodrigojaviergd@gmail.com</i></a>
-    </h3>
-    <h3>
+    <p>
+    ${t("contact_emailme", lang)}
+    <strong>
+    <a class="" href="mailto:${t("contact_email", lang)}" target="_blank" rel="noopener noreferrer">${t("contact_email", lang)}</a>
+    </strong>
+    </p>
+    <p>
+    ${t("contact_wsp_me", lang)}
+    <strong>
     <a class="" href="https://wa.me/${t("contact_phone", lang).replace(/\s/g, "")}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <h3>
+    </strong>
+    <p>
   </div>
 `;

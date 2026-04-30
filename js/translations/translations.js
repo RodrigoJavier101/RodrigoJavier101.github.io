@@ -6,13 +6,13 @@ export const translations = {
   home_title: {
     en: "Hi, my name is Rodrigo Javier, Software Engineer.",
     es: "Hola, mi nombre es Rodrigo Javier, Ingeniero de Software.",
-    il: "שלום, שמי רודריגו חוויאר, מהנדס תוכנה"
+    il: "שלום, שמי רודריגו חוויאר, מהנדס תוכנה",
   },
-  
+
   home_body: {
     en: `Please, pay attention to the <strong>blog</strong> section and the <strong>projects</strong> that I'm working on.`,
     es: `Por favor, presta atención a la sección de <strong>blog</strong> y a los <strong>proyectos</strong> en los que he trabajado.`,
-    il: 'אנא שימו לב לאזור ה<strong>בלוג</strong> ול<strong>פרויקטים</strong> עליהם עבדתי',
+    il: "אנא שימו לב לאזור ה<strong>בלוג</strong> ול<strong>פרויקטים</strong> עליהם עבדתי",
   },
 
   // Blog
@@ -26,34 +26,40 @@ export const translations = {
   projects_title: {
     en: "Featured Projects",
     es: "Proyectos Destacados",
-    il: "פרויקטים נבחרים"
+    il: "פרויקטים נבחרים",
   },
 
   // Contact
   contact_emailme: {
-    en: "Email me:",
-    es: "Escríbeme:",
-    il: "כתבו לי"
+    en: "You can email me to ",
+    es: "Puedes escribirme a ",
+    il: "אתה יכול לשלוח לי מייל ל- ",
   },
-  
+
   contact_email: {
     en: "rodrigojaviergd@gmail.com",
     es: "rodrigojaviergd@gmail.com", // Same email
     il: "rodrigojaviergd@gmail.com", // Same email
   },
-  
+
+  contact_wsp_me: {
+    en: "Or send me a message on ",
+    es: "O envíame un mensaje por ",
+    il: "או שלח לי הודעה דרך ",
+  },
+
   contact_phoneme: {
     en: "WhatsApp",
     es: "WhatsApp",
     il: "WhatsApp",
   },
-  
+
   contact_phone: {
     en: "+56 996 095 384",
     es: "+56 996 095 384",
     il: "+56 996 095 384",
   },
-  
+
   contact_alt: {
     en: "Contact information:",
     es: "Medios de contacto:",
@@ -114,4 +120,4 @@ export const translations = {
 export const DEFAULT_LANG = "en";
 
 // ✅ Lista de idiomas soportados
-export const SUPPORTED_LANGS = ["en", "es", "il"]; 
+export const SUPPORTED_LANGS = ["en", "es", "il"];
