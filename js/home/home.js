@@ -4,7 +4,7 @@ import { t } from "../translations/i18n.js";
 export const home = (lang) => `
  
   <div class="page container">
-    <h1>${t("home_title", lang)}</h1>
+    <h2>${t("home_title", lang)}</h2>
     <p>${t("home_body", lang) || ""}</p>
   </div>
 

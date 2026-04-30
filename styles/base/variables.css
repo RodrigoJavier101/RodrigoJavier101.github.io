@@ -27,7 +27,7 @@
   /* ✅ JetBrains Mono para código (recomendado) */
   --font-mono: "JetBrains Mono", Consolas, Monaco, "Courier New", monospace;
 
-  --zindex-ytmodal: 20;
+  --zindex-ytmodal: 200;
   --zindex-closebutton: 10;
   --zindex-navbar: 100;
   --zindex-hambutton: 101;

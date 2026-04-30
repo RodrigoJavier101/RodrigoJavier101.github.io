@@ -4,9 +4,9 @@
 export const translations = {
   // Home
   home_title: {
-    en: "Hi, my name is Rodrigo Javier, Software Engineer.",
-    es: "Hola, mi nombre es Rodrigo Javier, Ingeniero de Software.",
-    il: "שלום, שמי רודריגו חוויאר, מהנדס תוכנה",
+    en: "Hi I'm a <u>software engineer</u> and my name is <u>Rodrigo Javier</u>.",
+    es: "Hola, soy <u>ingeniero de software</u> y mi nombre es <u>Rodrigo Javier</u>.",
+    il: "שלום, אני מהנדס תוכנה ושמי רודריגו חאבייר.",
   },
 
   home_body: {
