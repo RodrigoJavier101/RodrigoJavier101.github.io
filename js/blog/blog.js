@@ -1,6 +1,6 @@
+// blog.js
 import { t } from "../translations/i18n.js";
-import { blogPosts } from "../blog/blogPosts.js";
-
+import { getAllBlogPosts } from "./blogPosts.js"; // 👈 Import helper
 
 // import { getBlogs } from "./firebase.js";
 
@@ -15,7 +15,8 @@ export const blog = (lang) => {
   //   })
   //   .filter((c) => c !== undefined);
 
-  const posts = blogPosts[lang] || blogPosts.en;
+  // 👇 NEW: Use helper to get posts with resolved translations
+  const posts = getAllBlogPosts(lang);
   
   const postList = posts
     .map((post) => {
@@ -26,11 +27,11 @@ export const blog = (lang) => {
       return `
         <article class="blog-post-preview">
           <h3>
-            <a href="#blog/${post.id}">${post.title}</a>
+            <a href="#blog/${post.id}">${post.title}</a> <!-- ✅ post.title is now a resolved string -->
           </h3>
           <span class="post-meta">
             <strong>
-              <time datetime="${post.date}">${post.date}</time>
+              <time datetime="${post.date}">${post.date}</time> <!-- ✅ post.date is formatted for lang -->
             </strong> 
           <!--   ${youtubeBtn} -->
           </span>
