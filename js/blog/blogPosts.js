@@ -1,3 +1,5 @@
+// blogPosts.js
+
 import { formattDate } from "./blogFunctions.js";
 import { langs } from "../utils/constants.js";
 
