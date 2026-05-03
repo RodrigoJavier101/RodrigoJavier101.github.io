@@ -2,7 +2,7 @@
 
 // 🎯 Single source of truth for app state
 const state = {
-  theme: "light",
+  theme: "dark",
   lang: "en", // Default language
 };
 
