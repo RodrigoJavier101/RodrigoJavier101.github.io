@@ -4,13 +4,13 @@ import { getBlogPost, blogPosts } from "./blogPosts.js"; // 👈 Also import raw
 
 export const blogPost = (postId, lang) => {
   // 🔍 DEBUG: Log what we're looking for
-  console.log("🔍 Looking for postId:", postId);
-  console.log("🔍 Available post IDs:", Object.keys(blogPosts));
-  console.log("🔍 Requested lang:", lang);
+  // console.log("🔍 Looking for postId:", postId);
+  // console.log("🔍 Available post IDs:", Object.keys(blogPosts));
+  // console.log("🔍 Requested lang:", lang);
 
   const post = getBlogPost(lang, postId);
   
-  console.log("🔍 Result from getBlogPost:", post);
+  // console.log("🔍 Result from getBlogPost:", post);
 
   if (!post) {
     return `
